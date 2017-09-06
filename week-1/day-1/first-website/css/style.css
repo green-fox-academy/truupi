@@ -1,0 +1,87 @@
+body {
+  margin: 0px;
+}
+
+.main {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 50px;
+  padding-top: 80px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.title {
+  color: #ff0099;
+  font-size: 28px;
+}
+
+.descriptionofme {
+  font-size: 20px;
+  font-family: 'Consolas', serif;
+}
+
+.separator {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.solutions {
+  font-size: 16px;
+  font-family: 'Consolas', serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 10% 0px 10%;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: #ff0099;
+  padding: 16px 15px 15px 15px;
+  text-decoration: underline;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 13px;
+
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.list {
+  text-align: right;
+  padding: 15px;
+}
+
+.spin {
+  float: left;
+  padding-top: 7px; 
+}
