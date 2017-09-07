@@ -1,0 +1,19 @@
+/* main {
+  padding: 0px;
+  margin: 0px;
+} */
+
+span {
+  background: grey;
+  border-radius: 150px;
+  height: 300px;
+  width: 300px;
+  font-size: 36px;
+  border: 6px; solid blue;
+  margin: 5px;
+
+}
+
+div {
+  margin: 20px;
+}
