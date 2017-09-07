@@ -2,13 +2,19 @@
 
 h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: bold;
   color: #E8AE2F;
 }
 
 p {
   font-family: Courier New, Courier, monospace;
   font-size: 15px;
-  padding: 0px;
+  font-weight: bold;
+  margin: 0px;
 
+ }
+
+p:nth-child(3) {
+  margin: auto 15px;
 }
