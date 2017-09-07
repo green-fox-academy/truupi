@@ -1,0 +1,14 @@
+/* Boxes */
+
+main div {
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  border: 5px solid #7DCE94;
+  background: #0E91A1;
+  width: 350px;
+  height: 135px;
+  font-size: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #005568;
+
+}
