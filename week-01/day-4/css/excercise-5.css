@@ -1,0 +1,47 @@
+h1 {
+  color: #FF6145;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+h2 {
+  color: #8B2DE2;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0px;
+  width: 30%;
+
+}
+
+ol li {
+  color: #FF58FF;
+  list-style-type: upper-roman;
+  text-decoration: underline;
+
+}
+
+ol li:last-child {
+  color: black;
+  text-decoration: underline;
+}
+
+ ul li:nth-child(5) {
+  list-style-type: none;
+} 
+
+ul {
+  list-style-type: square
+}
