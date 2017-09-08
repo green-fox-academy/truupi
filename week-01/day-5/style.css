@@ -3,6 +3,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 100%;
   margin: 0px;
+
 }
 
 /*  MAIN BOX  */
@@ -12,7 +13,6 @@ body {
   margin: 30px auto;
   box-sizing: border-box;
 }
-
 
 form p {
    /* display: inline-block; */
@@ -27,27 +27,30 @@ form p {
 
 header {
   width: 100%; 
-  padding: 10px;
+  padding: 0px;
   box-sizing: border-box;
-  margin: 0px auto;
+  margin: 0px 0px;
   float:left;
-
+  border: 1px solid black;
 }
 
 .half-header {
   width: 50%;
   box-sizing: border-box;
   float: left;
+  border: 1px solid black;
 } 
 
 h1 {
-  margin: 0px auto 0px 20px;
+  border: 1px solid black;
+  margin: 0px 0px 0px;
   color: #938C97;
   font-weight: normal;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h2 {
+  border: 1px solid black;
   background: #938C97;
   color: #FFFFFF;
   width: 50%; 
@@ -61,6 +64,7 @@ h2 {
 /*  FORM */
 
 div {
+  border: 1px solid black;
   box-sizing: border-box;
   margin: 0px;
 }
@@ -68,6 +72,7 @@ div {
 /*  UPPER FORM  */
 
 .up-field {
+  border: 1px solid black;
   width: 100%;
   float: left;
   box-sizing: border-box;
@@ -75,6 +80,7 @@ div {
 }
 
 .up-little {
+  border: 1px solid black;
   width: 50%;
   float: left;
   box-sizing: border-box;
@@ -84,11 +90,13 @@ div {
 /*  MIDDLE FORM  */
 
 .half-field p {
+  border: 1px solid black;
   width: 100%;
   margin: 10px auto 3px auto;
 }
 
 form input {
+  border: 1px solid black;
   width: 98%;
   padding: 5px; 
   
@@ -96,6 +104,7 @@ form input {
 
 .half-field input,
 .half-field option {
+  box-sizing: border-box;
   font-weight: normal;
   width: 100%;
   padding: 5px;
@@ -113,6 +122,7 @@ input[name=gender] {
   
 
 .half-field {
+  border: 1px solid black;
   width: 50%;
   box-sizing: border-box;
   float: left;
@@ -130,9 +140,11 @@ input[name=gender] {
 }
 
 .little-half {
+  border: 1px solid black;
   width: 50%;
   box-sizing: border-box;
   float: left; 
+  height: 60px;
 }
 
 input[type=radio] {
@@ -148,6 +160,7 @@ label {
 }
 
 .little {
+  border: 1px solid black;
   width: 100%;
   box-sizing: border-box;
   display: inline-block;
@@ -156,6 +169,7 @@ label {
 /*  LOWER FORM  */
 
 .down-field {
+  border: 1px solid black;
   width: 100%;
   box-sizing: border-box;
   display: inline-block;
