@@ -2,6 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
     <title>Fill-in form excercise</title>
     <meta name="description" content="">
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -27,20 +28,38 @@
         </div>
         <div class="half-field"> 
           <div class="little-half">
-            <p>little half</p>
+            <p>Születési éved</p>
+            <input type="text" id="date" placeholder="pl. 1984" />
           </div>
           <div class="little-half">
-            <p>little half2</p>
+            <p class="urname">Nemed</p>
+            <input type="radio" id="female" name="gender" />
+            <label for="female">nő</label>
+            <input type="radio" id="male" name="gender" />
+            <label for="male">férfi</label>
           </div>
           <div class="little">
-            <p>little</p>
+            <p>Milyen márkákat szeretsz?</p>
+
           </div>
         </div>
         <div class="half-field">
-          <p>big half</p>
+          <p>E-mail cím</p>
+          <input type="email" id="email" placeholder="nev@domain.hu" required />
+          <p>Facebook profilod</p>
+          <input type="url" id="facebook" placeholder="http://facebook.com/..." />
+          <p>Twitter profilod</p>
+          <input type="url" id="twitter" placeholder="http://twitter.com/..." />
+          <p>Milyen házban laksz?</p>
+          <select class="selection">
+            <option value="" hidden>Válassz típust!</option>
+            <option>Panel</option>
+            <option>Tégla</option>
+            <option>Kertes</option>
+          </select>
         </div>
         <div class="down-field">
-          <p>downfield</p>
+          <p>Bemutatkozás</p>
         </div>
       </form>
     </div>
