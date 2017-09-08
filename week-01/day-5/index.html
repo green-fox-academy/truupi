@@ -8,17 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
-      <h1>Profil</h1>
-      <h2>Személyes adatok</h2>
-      <h2>Kapcsolat</h2>
-    </header>
-    <form>
-      <div>
-        <!-- NAME AND EMAIL -->
+    <div id="main-box">
+      <header>
+        <h1>Profil</h1>
+        <h2>Személyes adatok</h2>
+        <h2>Kapcsolat</h2>
+      </header>
+      <form>
+        <div id="name-field">
+          <p>Név
+            <input type="text" id="name" required />
+          </p>
+          <p>Telefonszám
+            <input type="tel" id="tel" placeholder="+36 -- --- ---" required />
+          </p>
+        </div>
+        <div id="left-field">
 
-      </div>
+        </div>
+        <div id="right-field">
 
-    </form>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
