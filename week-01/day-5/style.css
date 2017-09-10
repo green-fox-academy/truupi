@@ -3,7 +3,6 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 100%;
   margin: 0px;
-
 }
 
 /*  MAIN BOX  */
@@ -49,22 +48,9 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h2 {
-  border: 1px solid black;
-  background: #938C97;
-  color: #FFFFFF;
-  width: 50%; 
-  padding: 10px;  
-  float: left;
-  box-sizing: border-box;
-  font-weight: normal;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 /*  FORM */
 
 div {
-  border: 1px solid black;
   box-sizing: border-box;
   margin: 0px;
 }
@@ -85,6 +71,17 @@ div {
   float: left;
   box-sizing: border-box;
   padding: 5px;
+}
+
+.personal {
+  border: 1px solid red;
+  font-size: 20px;
+  color: white;
+  background: grey;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 50%;
+  float: left;
 }
 
 /*  MIDDLE FORM  */
