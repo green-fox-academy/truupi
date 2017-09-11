@@ -12,7 +12,7 @@ namespace Excercise8
         {
             int a = 123;
             int b = 526;
-            a = a ^ b;
+            a = a ^ b;  
             b = a ^ b;
             a = a ^ b;
 
