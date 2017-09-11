@@ -18,15 +18,22 @@ namespace party_indicator_ex21
             int userNum1 = Int32.Parse(girls);
             int userNum2 = Int32.Parse(boys);
 
-            if (userNum1 > userNum2)
+            if (userNum1 == userNum2 && (userNum1 + userNum2) > 20)
             {
-                Console.WriteLine(userNum1 + " is the bigger one!");
+                Console.WriteLine("The party is excellent!");
             }
-            else
+            else if (userNum1 != userNum2 && (userNum1 + userNum2) > 20)
             {
-                Console.WriteLine(userNum2 + " is the bigger one!");
+                Console.WriteLine("Quite cool party!");
             }
-
+            else if (userNum1 > 0 && (userNum1 + userNum2) < 20)
+            {
+                Console.WriteLine("Average party...");
+            }
+            else if (userNum1 == 0 && (userNum2+userNum1) > 0)
+            {
+                Console.WriteLine("Ouch! Sausage party?");
+            }
             Console.ReadKey();
         }
     }
