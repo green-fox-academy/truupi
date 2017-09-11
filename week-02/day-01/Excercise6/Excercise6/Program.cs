@@ -14,12 +14,11 @@ namespace Excercise6
             double semester = 17;
             int workday = 5;
             double weeklyavg = 52;
-            double allhours = semester * workday * daily;            
-
+            double allhours = semester * workday * daily;
+            double percentage = allhours / (semester * weeklyavg) * 100;
 
             Console.WriteLine(allhours);
-
-            Console.WriteLine(allhours / (semester * weeklyavg) * 100 + "%");
+            Console.WriteLine(percentage + "%");
 
             Console.ReadLine();
         }
