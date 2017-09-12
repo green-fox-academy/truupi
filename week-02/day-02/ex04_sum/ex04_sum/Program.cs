@@ -21,13 +21,11 @@ namespace ex04_sum
         static int Sum(int input)
         {
             
-            for (int i = 1; i <= input; i++)
+            for (int i = input-1; i >= 0; i--)
             {
-                Console.WriteLine(i);
+                input += i;
             }
-
-            int sum = input;
-            return sum;
+            return input;
         }
 
     } 
