@@ -16,9 +16,9 @@ namespace triangle_ex28
             for (int i = 0; i <= input; i++)
             {
                 Console.WriteLine(star);
-                star += "*";
+                star += "*z";
             }
-            Console.ReadLine();
+            
 
         }
     }
