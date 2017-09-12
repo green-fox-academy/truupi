@@ -22,7 +22,7 @@ namespace ex05_factorio
         {
                if (input <= 1)
                    return 1;
-               return input * Factorial(input--);
+               return input * Factorial(input - 1);
         }
     }
 }
