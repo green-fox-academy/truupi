@@ -12,12 +12,22 @@ namespace Ex7_Matchmaking
         {
             var girls = new List<string> { "Eve", "Ashley", "Bözsi", "Kat", "Jane" };
             var boys = new List<string> { "Joe", "Fred", "Béla", "Todd", "Neef", "Jeff" };
-            var order = new List<string>();
+            var order = girls.Join
+                (boys, 
+                g => girls.IndexOf(g), 
+                b => boys.IndexOf(b), 
+                (g, b) => new { G = g, B = b }).ToList();
 
-            // Join the two lists by matching one girl with one boy in the order list
-            // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
+            foreach (var item in order)
+            {
+                Console.Write("{0}, {1}, ", item.G, item.B);
 
-            Console.WriteLine(order);
+                if (item == order.Last())
+                {
+                    Console.Write(boys.Last());
+                }
+            }
+            Console.ReadLine();
         }
     }
 }
