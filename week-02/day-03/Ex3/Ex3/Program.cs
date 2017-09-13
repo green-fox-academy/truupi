@@ -10,7 +10,7 @@ namespace Ex3
     {
         static void Main(string[] args)
         {
-            StringBuilder qoute = new StringBuilder("Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.");
+            var qoute = new StringBuilder("Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.");
             Console.WriteLine(qoute.Insert(21, "always takes longer than "));
             Console.ReadLine();
         }
