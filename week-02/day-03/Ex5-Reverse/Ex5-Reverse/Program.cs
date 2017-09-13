@@ -17,9 +17,9 @@ namespace Ex5_Reverse
 
         static string Reverser(string s)
         {
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
+            char[] lol = s.ToCharArray();
+            Array.Reverse(lol);
+            return new string(lol);
         }
     }
 }
