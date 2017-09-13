@@ -10,13 +10,18 @@ namespace Ex14_DoubleItems
     {
         static void Main(string[] args)
         {
+            Doubling();
+            Console.ReadLine();
+        }
+
+        static void Doubling()
+        {
             int[] ag = { 3, 4, 5, 6, 7 };
 
-            for (int i = 0; i < ag.Length; i++)
+            for (int i = 0; i<ag.Length; i++)
             {
                 Console.WriteLine(ag[i] * 2);
             }
-            Console.ReadLine();
         }
     }
 }
