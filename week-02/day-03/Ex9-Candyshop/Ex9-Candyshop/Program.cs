@@ -16,12 +16,18 @@ namespace Ex9_Candyshop
             list.Add("Brownie");
             list.Add(false);
 
-            list[1] = "Croissant";
-            list[3] = "Ice cream";
+            if (list.ElementAt(1) != list.ElementAt(2))
+            {
+                list[1] = "Croissant";
+            }
+            if (list.ElementAt(3) != list.ElementAt(2))
+            {
+                list[3] = "Ice cream";
+            }
 
             foreach (var item in list)
             {
-                Console.WriteLine(item);
+               Console.WriteLine(item);
             }
             Console.ReadLine();
         }
