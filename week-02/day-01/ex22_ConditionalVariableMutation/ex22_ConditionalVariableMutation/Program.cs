@@ -64,15 +64,16 @@ namespace ex22_ConditionalVariableMutation
             int c = 123;
             int credits = 100;
             bool isBonus = false;
-            if (credits >= 50 && !isBonus)
+
+            if (credits >= 50 && isBonus)
             {
                 c -= 2;
             }
-            else if (credits < 50 && !isBonus)
+            else if (credits < 50 && isBonus)
             {
                 c--;
             }
-            else if (isBonus)
+            else if (!isBonus)
             {
                 c += 0;
             }
