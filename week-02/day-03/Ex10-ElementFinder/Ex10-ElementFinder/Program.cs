@@ -12,22 +12,29 @@ namespace Ex10_ElementFinder
         {
             Console.WriteLine("Please enter a number to see if it exists in our list or not: \n");
             int input = int.Parse(Console.ReadLine());
-            Check(input);
+
+            Answer(Check(input));
             Console.ReadLine();
         }
 
-        static string Check(int input)
+        static bool Check(int input)
         {
             var List = new List<int> { 1, 2, 3, 4, 5 };
-            int contain = 0;
+            bool something = false;
             foreach (var item in List)
             {
                 if (item == input)
                 {
-                    contain = 1;
+                    something = true;
                 }
             }
-            if (contain == 1)
+            return something;
+        }
+
+
+        static string Answer(bool something)
+        {
+            if (something)
             {
                 Console.WriteLine("\nHuurray! You have a match!");
             }
@@ -35,7 +42,7 @@ namespace Ex10_ElementFinder
             {
                 Console.WriteLine("\nNooo! No matches this time!");
             }
-            return input.ToString();
+            return something.ToString();
         }
     }
 }
