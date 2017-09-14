@@ -13,6 +13,7 @@ namespace ex22_ConditionalVariableMutation
             Console.WriteLine(First());
             Console.WriteLine(Second());
             Console.WriteLine(Third());
+            Console.WriteLine(Fourth());
             Console.ReadLine();
 
            
@@ -78,6 +79,35 @@ namespace ex22_ConditionalVariableMutation
                 c += 0;
             }
             return c;
+        }
+
+        static string Fourth()
+        {
+            int d = 9;
+            int time = 10;
+            string out3 = "{0}";
+
+            if(d % 4 == 0 && time < 200)
+            {
+                out3 = "check";
+            }
+            else if (time > 200)
+            {
+                out3 = "Time out";
+            }
+            else
+            {
+                out3 = "Run Forest Run!";
+            }
+
+            // if d is dividable by 4
+            // and time is not more than 200
+            // set out3 to "check"
+            // if time is more than 200
+            // set out3 to "Time out"
+            // otherwise set out3 to "Run Forest Run!"
+
+            return out3;
         }
     }
 }
