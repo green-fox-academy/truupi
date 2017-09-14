@@ -31,7 +31,6 @@ namespace Ex10_ElementFinder
             return something;
         }
 
-
         static string Answer(bool something)
         {
             if (something)
