@@ -23,7 +23,7 @@ namespace PalindromeSearcher
         static List<string> Listcreator(string input1)
         {
             var PalindromeList = new List<string>();
-            for (int i = 0; i < input1.Length; i++)
+            for (int i = 0; i < i +1; i++)
             {
                 PalindromeList.Add(input1);
             }
