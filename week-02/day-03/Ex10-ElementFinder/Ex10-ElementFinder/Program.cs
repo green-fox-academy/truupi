@@ -20,20 +20,20 @@ namespace Ex10_ElementFinder
         static bool Check(int input)
         {
             var List = new List<int> { 1, 2, 3, 4, 5 };
-            bool something = false;
+            bool containsornot = false;
             foreach (var item in List)
             {
                 if (item == input)
                 {
-                    something = true;
+                    containsornot = true;
                 }
             }
-            return something;
+            return containsornot;
         }
 
-        static string Answer(bool something)
+        static void Answer(bool input)
         {
-            if (something)
+            if (input)
             {
                 Console.WriteLine("\nHuurray! You have a match!");
             }
@@ -41,7 +41,6 @@ namespace Ex10_ElementFinder
             {
                 Console.WriteLine("\nNooo! No matches this time!");
             }
-            return something.ToString();
         }
     }
 }
