@@ -10,9 +10,9 @@ namespace ex26_CountFromTo
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter two numbers and hit Enter after each:\n");
             int num1 = int.Parse(Console.ReadLine());
             int num2 = int.Parse(Console.ReadLine());
-            int console = 5, Space, Lol;
             
             while (Compare(num1, num2))
             {
