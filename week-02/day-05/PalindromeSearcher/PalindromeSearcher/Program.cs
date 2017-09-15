@@ -10,22 +10,34 @@ namespace PalindromeSearcher
     {
         static void Main(string[] args)
         {
-
-        }
-        
-        static List[] PalindromeSearcher(string input1)
-        {
-
-        }
-
-        static void ListCreator()
-        {
-
+            bool isplaindrome = IsPalindrome(userInput());
+            if (isplaindrome)
+            {
+                
+            }
         }
 
-        static void IsPalindrome()
+        static string userInput()
         {
-            
+            string result = Console.ReadLine();
+            return result;
+        }
+
+        //static list[] palindromesearcher(string input1)
+        //{
+
+        //}
+
+        //static void listcreator()
+        //{
+
+        //}
+
+        static bool IsPalindrome(string input1)
+        {
+            bool result = false;
+            result = input1 == new string(input1.Reverse().ToArray()) && input1.Length >= 3;
+            return result;
         }
     }
 }
