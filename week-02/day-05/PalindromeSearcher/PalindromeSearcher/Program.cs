@@ -10,7 +10,7 @@ namespace PalindromeSearcher
     {
         static void Main(string[] args)
         {
-            string result = Console.ReadLine();
+            string result = userInput();
             bool isplaindrome = IsPalindrome(result);
             if (isplaindrome)
             {
@@ -19,11 +19,17 @@ namespace PalindromeSearcher
             else Console.WriteLine("Not an palindrome!");
             Console.ReadLine();
         }
+
+        static string userInput()
+        {
+            string result = Console.ReadLine();
+            return result;
+        }
         
         static List<string> Listcreator(string input1)
         {
             var PalindromeList = new List<string>();
-            for (int i = 0; i < i +1; i++)
+            for (int i = 0; i < 1; i++)
             {
                 PalindromeList.Add(input1);
             }
