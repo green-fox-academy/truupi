@@ -10,17 +10,20 @@ namespace PalindromeSearcher
     {
         static void Main(string[] args)
         {
-            string result = userInput();
-            bool isplaindrome = IsPalindrome(result);
+            IfPalindrome(UserInput(), IsPalindrome(UserInput()));
+            Console.ReadLine();
+        }
+
+        static void IfPalindrome(string result, bool isplaindrome)
+        {
             if (isplaindrome)
             {
                 Listcreator(result);
             }
             else Console.WriteLine("Not an palindrome!");
-            Console.ReadLine();
         }
 
-        static string userInput()
+        static string UserInput()
         {
             string result = Console.ReadLine();
             return result;
