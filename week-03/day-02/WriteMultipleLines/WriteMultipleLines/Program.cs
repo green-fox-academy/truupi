@@ -28,7 +28,6 @@ namespace WriteMultipleLines
                         writer.WriteLine(word);
                     }
                 }
-
             }
             catch
             {
