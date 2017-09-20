@@ -28,16 +28,15 @@ namespace Ex10_RainbowBoxes
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
-            for (int i = 300; i > 0; i -= 10)
+            for (int i = 250; i > 0; i -= 5)
             {
                 RectangleDrawer(i, foxDraw, RandomColorGenerator());
             }
-            
         }
 
         public Color RandomColorGenerator()
         {
-            var randomColor = Color.FromArgb((byte)rnd.Next(100), (byte)rnd.Next(256), (byte)rnd.Next(256), (byte)rnd.Next(256));
+            var randomColor = Color.FromRgb((byte)rnd.Next(256), (byte)rnd.Next(256), (byte)rnd.Next(256));
             return randomColor;
         }
 
