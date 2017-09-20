@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{78E7AEB1-78EF-44EF-8567-E95BF60C4F74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1-LineInTheMiddle", "WpfApp1\Ex1-LineInTheMiddle.csproj", "{78E7AEB1-78EF-44EF-8567-E95BF60C4F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
