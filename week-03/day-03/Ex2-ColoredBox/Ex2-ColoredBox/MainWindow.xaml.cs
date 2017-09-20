@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GreenFox;
 
 namespace Ex2_ColoredBox
 {
@@ -23,6 +24,17 @@ namespace Ex2_ColoredBox
         public MainWindow()
         {
             InitializeComponent();
+            var foxie = new FoxDraw(canvas);
+
+            foxie.BackgroundColor(Colors.Black);
+            foxie.StrokeColor(Colors.Red);
+            foxie.DrawLine(50, 50, 150, 50);
+            foxie.StrokeColor(Colors.Green);
+            foxie.DrawLine(150, 50, 150, 150);
+            foxie.StrokeColor(Colors.Yellow);
+            foxie.DrawLine(150, 150, 50, 150);
+            foxie.StrokeColor(Colors.Blue);
+            foxie.DrawLine(50, 150, 50, 50);
         }
     }
 }
