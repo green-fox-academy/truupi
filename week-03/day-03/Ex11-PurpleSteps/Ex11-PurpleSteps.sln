@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex11-PurpleSteps", "Ex11-PurpleSteps\Ex11-PurpleSteps.csproj", "{FA9AB715-4717-4E7A-9350-452EA4EA69E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9AB715-4717-4E7A-9350-452EA4EA69E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9AB715-4717-4E7A-9350-452EA4EA69E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9AB715-4717-4E7A-9350-452EA4EA69E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9AB715-4717-4E7A-9350-452EA4EA69E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {345287C9-792B-4F1E-88E0-1EF62DAD15D6}
+	EndGlobalSection
+EndGlobal
