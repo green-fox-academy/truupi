@@ -10,17 +10,22 @@ namespace Ex06_Bunny2
     {
         static void Main(string[] args)
         {
-            int[] BunnyRow = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            Console.WriteLine(Recursive());
+            int bunnyNum = 7;
+            Console.WriteLine(Recursive(bunnyNum));
             Console.ReadLine();
         }
 
-        static int Recursive()
+        static int Recursive(int bunnyNum)
         {
-            int[] BunnyRow = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            int n = BunnyRow.Length;
-
-            return n;
+            if (bunnyNum == 0)
+            {
+                return 0;
+            }
+            if (bunnyNum % 2 == 1)
+            {
+                return 2 + Recursive(bunnyNum - 1);
+            }
+            return 3 + Recursive(bunnyNum - 1);
         }
     }
 }
