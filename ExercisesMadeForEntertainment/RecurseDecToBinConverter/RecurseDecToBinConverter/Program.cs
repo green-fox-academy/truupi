@@ -14,9 +14,7 @@ namespace RecurseDecToBinConverter
             {
                 Running();
             }
-            Console.WriteLine("\n\n\nThe program now closes!");
-            Console.ReadLine();
-            System.Environment.Exit(1);
+            Closing();
         }
 
         static bool Running()
@@ -83,14 +81,20 @@ namespace RecurseDecToBinConverter
                     }
                 else if (answer == "n")
                 {
-                    Console.WriteLine("\n\n\nThe program now closes!");
-                    Console.ReadLine();
-                    System.Environment.Exit(1);
+                    Closing();
+                    
                 }
                 TrueOrFalse();
                 break;
             }
             return answer;
+        }
+
+        private static void Closing()
+        {
+            Console.WriteLine("\n\n\nThe program now closes!");
+            Console.ReadLine();
+            System.Environment.Exit(1);
         }
 
         private static int DeciToBin(int num)
