@@ -27,6 +27,5 @@ namespace Ex04_Power
             else
                 return baseNum * Recursive(baseNum, powerNum - 1);
         }
-
     }
 }
