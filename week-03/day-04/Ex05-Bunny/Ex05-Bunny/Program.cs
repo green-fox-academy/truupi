@@ -13,7 +13,6 @@ namespace Ex05_Bunny
             int BunnyNum = 13;
             Console.WriteLine(Recursive(BunnyNum));
             Console.ReadLine();
-
         }
 
         static int Recursive(int BunnyNum)
