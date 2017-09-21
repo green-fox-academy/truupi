@@ -10,21 +10,19 @@ namespace Ex03_SumDigit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(sumDigitsRecursion(34454232423443534, 0));
+            Console.WriteLine(sumDigitsRecursion(12345));
             Console.ReadLine();
         }
 
-        static long sumDigitsRecursion(long baseNum, long sumDigits)
+        static long sumDigitsRecursion(long baseNum)
         {
             if (baseNum == 0)
             {
-                return sumDigits;
+                return 0;
             }
             else
             {
-                sumDigits = sumDigits + baseNum % 10;
-                baseNum = baseNum / 10;
-                return sumDigitsRecursion(baseNum, sumDigits);
+                return baseNum % 10 + sumDigitsRecursion(baseNum / 10);
             }
         }
     }
