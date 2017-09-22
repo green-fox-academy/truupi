@@ -21,6 +21,8 @@ namespace Ex01_Triangles
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static Random rnd = new Random();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Ex01_Triangles
 
         public void Drawer(FoxDraw foxDraw, double startx, double starty, double endx, double endy, int depth)
         {
+            foxDraw.StrokeColor(RandomColorGenerator());
             foxDraw.DrawLine(startx, starty, endx, starty);
             foxDraw.DrawLine(startx, starty, startx + (endx - startx) / 2, endy);
             foxDraw.DrawLine(endx, starty, startx + (endx - startx) / 2, endy);
@@ -43,6 +46,12 @@ namespace Ex01_Triangles
                 Drawer(foxDraw, startx + (endx - startx) / 2, starty, endx, starty + (endy - starty) / 2, depth);
                 Drawer(foxDraw, startx + (endx - startx) / 4, starty + (endy - starty) / 2, startx + (endx - startx) / 4 * 3, endy, depth);
             }
+        }
+
+        public Color RandomColorGenerator()
+        {
+            var randomColor = Color.FromRgb((byte)rnd.Next(256), (byte)rnd.Next(256), (byte)rnd.Next(256));
+            return randomColor;
         }
     }
 }
