@@ -26,8 +26,8 @@ namespace Ex11_RecursorRect
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
             foxDraw.FillColor(Colors.Yellow);
-            foxDraw.DrawRectangle(0, 0, 600, 600);
-            Drawer(foxDraw, 0, 0, 600, 600, 5);
+            foxDraw.DrawRectangle(0, 0, canvas.Width, canvas.Height);
+            Drawer(foxDraw, 0, 0, canvas.Width, canvas.Height, 5);
         }
 
         public void Drawer(FoxDraw foxDraw, double startx, double starty, double endx, double endy, int depth)
