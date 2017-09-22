@@ -82,7 +82,6 @@ namespace RecurseDecToBinConverter
                 else if (answer == "n")
                 {
                     Closing();
-                    
                 }
                 TrueOrFalse();
                 break;
