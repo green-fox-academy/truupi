@@ -10,6 +10,8 @@ namespace RecurseDecToBinConverter
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("     ____________________________\n" + "\n     DECIMAL TO BINARY CALCULATOR\n" + "\n     ____________________________");
+            Console.ReadLine();
             while (Running())
             {
                 Running();
