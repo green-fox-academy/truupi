@@ -26,25 +26,22 @@ namespace Ex01_Triangles
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
             foxDraw.FillColor(Colors.Yellow);
-            foxDraw.DrawRectangle(0, 0, canvas.Width, canvas.Height);
-            Drawer(foxDraw, 0, 0, canvas.Width, canvas.Height, 5);
+            Drawer(foxDraw, 0, 0, canvas.Width, canvas.Height, 8);
         }
 
         public void Drawer(FoxDraw foxDraw, double startx, double starty, double endx, double endy, int depth)
         {
-            foxDraw.DrawLine(startx + (endx - startx) / 3, starty, startx + (endx - startx) / 3, endy);
-            foxDraw.DrawLine(startx + (endx - startx) / 1.5, starty, startx + (endx - startx) / 1.5, endy);
-            foxDraw.DrawLine(startx, starty + (endy - starty) / 3, endx, starty + (endy - starty) / 3);
-            foxDraw.DrawLine(startx, starty + (endy - starty) / 1.5, endx, starty + (endy - starty) / 1.5);
+            foxDraw.DrawLine(startx, starty, endx, starty);
+            foxDraw.DrawLine(startx, starty, startx + (endx - startx) / 2, endy);
+            foxDraw.DrawLine(endx, starty, startx + (endx - startx) / 2, endy);
 
             depth--;
 
             if (depth > 0)
             {
-                Drawer(foxDraw, startx + (endx - startx) / 3, starty, startx + (endx - startx) / 1.5, starty + (endy - starty) / 3, depth);
-                Drawer(foxDraw, startx + (endx - startx) / 3, starty + (endy - starty) / 1.5, startx + (endx - startx) / 1.5, endy, depth);
-                Drawer(foxDraw, startx, starty + (endy - starty) / 3, startx + (endx - startx) / 3, starty + (endy - starty) / 1.5, depth);
-                Drawer(foxDraw, startx + (endx - startx) / 1.5, starty + (endy - starty) / 3, endx, starty + (endy - starty) / 1.5, depth);
+                Drawer(foxDraw, startx, starty, startx + (endx - startx) / 2, starty + (endy - starty) / 2, depth);
+                Drawer(foxDraw, startx + (endx - startx) / 2, starty, endx, starty + (endy - starty) / 2, depth);
+                Drawer(foxDraw, startx + (endx - startx) / 4, starty + (endy - starty) / 2, startx + (endx - startx) / 4 * 3, endy, depth);
             }
         }
     }
