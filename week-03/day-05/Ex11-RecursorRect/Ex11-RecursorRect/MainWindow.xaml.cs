@@ -46,7 +46,6 @@ namespace Ex11_RecursorRect
                 Drawer(foxDraw, startx, starty + (endy - starty) / 3, startx + (endx - startx) / 3, starty + (endy - starty) / 1.5, depth);
                 Drawer(foxDraw, startx + (endx - startx) / 1.5, starty + (endy - starty) / 3, endx, starty + (endy - starty) / 1.5, depth);
             }
-            
         }
     }
 }
