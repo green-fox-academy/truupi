@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6344C79C-DA29-4A33-B968-3400072664B0}</ProjectGuid>
+    <ProjectGuid>{5E70A2BB-C474-47B3-A26D-9F886FE23264}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Ex01_Triangles</RootNamespace>
     <AssemblyName>Ex01-Triangles</AssemblyName>

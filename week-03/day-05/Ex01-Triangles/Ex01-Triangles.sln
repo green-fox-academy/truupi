@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01-Triangles", "Ex01-Triangles\Ex01-Triangles.csproj", "{6344C79C-DA29-4A33-B968-3400072664B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01-Triangles", "Ex01-Triangles\Ex01-Triangles.csproj", "{5E70A2BB-C474-47B3-A26D-9F886FE23264}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6344C79C-DA29-4A33-B968-3400072664B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6344C79C-DA29-4A33-B968-3400072664B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6344C79C-DA29-4A33-B968-3400072664B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6344C79C-DA29-4A33-B968-3400072664B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E70A2BB-C474-47B3-A26D-9F886FE23264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E70A2BB-C474-47B3-A26D-9F886FE23264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E70A2BB-C474-47B3-A26D-9F886FE23264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E70A2BB-C474-47B3-A26D-9F886FE23264}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F87119D8-8F6E-4023-8E56-5CCD96ABB5B1}
+		SolutionGuid = {CF0EED40-A317-40E9-97BA-DDAAE9CEBB45}
 	EndGlobalSection
 EndGlobal
