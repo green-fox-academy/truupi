@@ -33,7 +33,7 @@ namespace Ex01_Triangles
 
         public void Drawer(FoxDraw foxDraw, double startx, double starty, double endx, double endy, int depth)
         {
-            foxDraw.StrokeColor(RandomColorGenerator());
+            //foxDraw.StrokeColor(RandomColorGenerator());
             foxDraw.DrawLine(startx, starty, endx, starty);
             foxDraw.DrawLine(startx, starty, startx + (endx - startx) / 2, endy);
             foxDraw.DrawLine(endx, starty, startx + (endx - startx) / 2, endy);
