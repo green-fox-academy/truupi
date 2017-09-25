@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03-Dominoes", "Ex03-Dominoes\Ex03-Dominoes.csproj", "{F996C53D-A0FB-4358-AD14-3CC531CAAEFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F996C53D-A0FB-4358-AD14-3CC531CAAEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F996C53D-A0FB-4358-AD14-3CC531CAAEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F996C53D-A0FB-4358-AD14-3CC531CAAEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F996C53D-A0FB-4358-AD14-3CC531CAAEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F3C6742-D631-4B8F-9D3E-2349C340CBED}
+	EndGlobalSection
+EndGlobal
