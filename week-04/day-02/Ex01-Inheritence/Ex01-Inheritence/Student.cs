@@ -13,18 +13,12 @@ namespace Ex01_Inheritence
 
         public Student()
         {
-            name = "Jane Doe";
-            age = 30;
-            gender = "female";
             previousOrganization = "The School of Life";
             skippedDays = 0;
         }
 
-        public Student(string name, int age, string gender, string previousOrganization)
+        public Student(string name, int age, string gender, string previousOrganization) : base (name, age, gender)
         {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
             this.previousOrganization = previousOrganization;
             skippedDays = 0;
         }
