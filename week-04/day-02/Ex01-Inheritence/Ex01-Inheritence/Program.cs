@@ -12,6 +12,10 @@ namespace Ex01_Inheritence
         {
             Person someone = new Person("Tamas Deak", 24, "male");
             Person somebody = new Person();
+            Student studentin = new Student();
+
+            studentin.GetGoal();
+            studentin.Introduce();
 
             someone.Introduce();
             somebody.Introduce();

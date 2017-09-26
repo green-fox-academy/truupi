@@ -35,6 +35,5 @@ namespace Ex01_Inheritence
         {
             Console.WriteLine(string.Format("My goal is: Live for the moment!"));
         }
-      
     }
 }
