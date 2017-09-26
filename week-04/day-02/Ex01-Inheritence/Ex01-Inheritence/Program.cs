@@ -10,6 +10,13 @@ namespace Ex01_Inheritence
     {
         static void Main(string[] args)
         {
+            Person someone = new Person("Tamas Deak", 24, "male");
+            Person somebody = new Person();
+
+            someone.Introduce();
+            somebody.Introduce();
+
+            Console.ReadLine();
         }
     }
 }
