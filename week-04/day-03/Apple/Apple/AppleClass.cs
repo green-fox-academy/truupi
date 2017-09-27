@@ -10,7 +10,7 @@ namespace Apple
     {
         public string GetApple()
         {
-            return "apple";
+            return "pear";
         }
     }
 }
