@@ -11,7 +11,6 @@ namespace CountLetters
         public Dictionary<char, int> StringToDict(string word)
         {
             Dictionary<char, int> resultDict = new Dictionary<char, int>();
-
             if (String.IsNullOrEmpty(word))
             {
                 return resultDict;

@@ -17,10 +17,10 @@ namespace CountLettersTest
         [Test]
         public void IsItRight()
         {
-            string input = "alma";
+            string input = "ilmi";
             Dictionary<char, int> testDict = new Dictionary<char, int>()
             {
-                { 'a', 2 },
+                { 'i', 2 },
                 { 'l', 1 },
                 { 'm', 1 }
             };
