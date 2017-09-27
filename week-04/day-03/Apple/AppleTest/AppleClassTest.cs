@@ -17,7 +17,7 @@ namespace AppleTest
         [Test]
         public void Test_Apple_ReturnsApple()
         {
-            string apple = "apple";
+            string apple = "pear";
             Assert.AreEqual(apple, appleclass.GetApple());
         }
     }
