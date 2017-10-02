@@ -12,15 +12,15 @@ namespace AnagramTest
 
     public class AnagramClassTest
     {
-        AnagramClass anie = new AnagramClass();
+        AnagramClass anagrClass = new AnagramClass();
 
         [Test]
         public void AnagramTester()
         {
-            string word = "bubika";
-            string word2 = "abikub";
+            string word = "spoN sor";
+            string word2 = "sp on  soR";
             bool result = true;
-            Assert.AreEqual(result, anie.IsAnagram(word, word2));
+            Assert.AreEqual(result, anagrClass.AnagramCheck(word, word2));
         }
     }
 }

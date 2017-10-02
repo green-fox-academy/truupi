@@ -59,9 +59,9 @@ namespace IsAnagram
         {
             if (input1)
             {
-                Console.WriteLine("It is an anagram!");
+                Console.WriteLine("\nIt is an anagram!");
             }
-            else Console.WriteLine("Not an anagram!");
+            else Console.WriteLine("\nNot an anagram!");
         }
     }
 }
