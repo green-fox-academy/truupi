@@ -10,7 +10,14 @@ namespace Anagram
     {
         public bool AnagramCheck (string word1, string word2)
         {
-            return word1 == word2 ? true : false;
+            return (word1 == null || word2 == null) ? false : StringConvert(word1) == StringConvert(word2);
+        }
+
+        private string StringConvert(string word)
+        {            
+            char[] array = word.Replace(" ", "").ToLower().ToArray();
+            Array.Sort(array);
+            return new string(array);           
         }
     }
 

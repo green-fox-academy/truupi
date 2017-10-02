@@ -20,28 +20,46 @@ namespace AnagramTesting
             string word2 = "borso";
             bool result = true;
             Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
-            word2 = "osrob";
-            result = true;
+            word2 = "huvelyes";
+            result = false;
             Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
         }
 
-        //[Test]
-        //public void AreStingsLengthTheSame()
-        //{
-        //    string word1 = "borso";
-        //    string word2 = "kiskunfelegyhaza";
-        //    bool result = false;
-        //    Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
-        //}
+        [Test]
+        public void UpperOrSmaller()
+        {
+            string word1 = "borso";
+            string word2 = "BORSO";
+            bool result = true;
+            Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
+        }
 
-        //[Test]
-        //public void UpperOrSmaller()
-        //{
-        //    string word1 = "borso";
-        //    string word2 = "BORSO";
-        //    bool result = false;
-        //    Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
-        //}
+        [Test]
+        public void StingWithSpaces()
+        {
+            string word1 = "borso";
+            string word2 = "b o  r s o";
+            bool result = true;
+            Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
+        }
+
+        [Test]
+        public void StingWithNull()
+        {
+            string word1 = "borso";
+            string word2 = null;
+            bool result = false;
+            Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
+        }
+
+        [Test]
+        public void EmptyString()
+        {
+            string word1 = "borso";
+            string word2 = "";
+            bool result = false;
+            Assert.AreEqual(result, anclass.AnagramCheck(word1, word2));
+        }
 
     }
 }
