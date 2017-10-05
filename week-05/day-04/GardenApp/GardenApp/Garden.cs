@@ -34,19 +34,11 @@ namespace GardenApp
         {
             foreach (var plant in myPlants)
             {
-                if (plant.GetPlantWaterLevel() < 5 && plant.GetPlantType() == "Flower")
+                if (plant.GetPlantWaterLevel() < plant.GetPlantMinWaterLevel())
                 {
                     Console.WriteLine(NeedWater(plant));
                 }
-                else if (plant.GetPlantWaterLevel() > 5 && plant.GetPlantType() == "Flower")
-                {
-                    Console.WriteLine(NoNeedWater(plant));
-                }
-                else if (plant.GetPlantWaterLevel() < 10 && plant.GetPlantType() == "Tree")
-                {
-                    Console.WriteLine(NeedWater(plant));
-                }
-                else if (plant.GetPlantWaterLevel() > 10 && plant.GetPlantType() == "Tree")
+                else
                 {
                     Console.WriteLine(NoNeedWater(plant));
                 }
