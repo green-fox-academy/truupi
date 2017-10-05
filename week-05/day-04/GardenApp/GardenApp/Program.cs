@@ -10,13 +10,22 @@ namespace GardenApp
     {
         static void Main(string[] args)
         {
+            GardenCreation();
+        }
+
+        static void GardenCreation()
+        {
             Garden myGarden = new Garden();
-            myGarden.Methods();
-            myGarden.PlantsToMyPlants();
+            myGarden.GardenPlanting();
+            GardenWatering(myGarden);
+            Console.ReadLine();
+        }
+
+        static void GardenWatering(Garden myGarden)
+        {
+            myGarden.WateringPlants(0);
             myGarden.WateringPlants(40);
             myGarden.WateringPlants(70);
-            myGarden.WriteOut();
-            Console.ReadLine();
         }
     }
 }

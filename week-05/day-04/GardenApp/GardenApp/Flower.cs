@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GardenApp
+﻿namespace GardenApp
 {
     class Flower : Plant
     {
-        public Flower(int waterLevel, string color)
+        public Flower(string color)
         {
-            this.waterLevel = waterLevel;
+            absorb = 0.75f;
+            type = "Flower";
             this.color = color;
         }
     }

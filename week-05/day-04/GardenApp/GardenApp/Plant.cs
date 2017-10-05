@@ -8,18 +8,29 @@ namespace GardenApp
 {
     class Plant : Garden
     {
-        protected int waterLevel;
+        protected float waterLevel;
         protected string color;
+        protected string type;
+        protected float absorb;
 
-        public int SetPlantWaterLevel(int waterLevel)
+        public float SetPlantWaterLevel(float waterLevel)
         {
-            this.waterLevel += waterLevel;
+            return this.waterLevel += waterLevel * absorb;
+        }
+
+        public float GetPlantWaterLevel()
+        {
             return waterLevel;
         }
 
-        public int GetPlantWaterLevel()
+        public string GetPlantType()
         {
-            return waterLevel;
+            return type;
+        }
+
+        public string GetPlantColor()
+        {
+            return color;
         }
     }
 }
