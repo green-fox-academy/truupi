@@ -10,7 +10,7 @@ namespace FibonacciVarations
     {
         static void Main(string[] args)
         {
-            double number = 9;
+            double number = 4;
             Console.WriteLine(GetNthFibonacci(number));
             Console.ReadLine();
         }
