@@ -11,13 +11,7 @@ namespace Ex01_Inheritence
         protected string previousOrganization;
         protected int skippedDays;
 
-        public Student()
-        {
-            previousOrganization = "The School of Life";
-            skippedDays = 0;
-        }
-
-        public Student(string name, int age, string gender, string previousOrganization) : base (name, age, gender)
+        public Student(string name ="Juli", int age = 5, string gender = "male", string previousOrganization = "GFA") : base (name, age, gender)
         {
             this.previousOrganization = previousOrganization;
             skippedDays = 0;
@@ -25,7 +19,7 @@ namespace Ex01_Inheritence
 
         public object Clone()
         {
-            return new Student();
+            return new Student(name, age, gender, previousOrganization);
         }
 
         public new void GetGoal()

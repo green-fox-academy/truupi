@@ -11,20 +11,12 @@ namespace Ex01_Inheritence
         protected string name;
         protected int age;
         protected string gender;
-        ICloneable cloneable;
 
-        public Person(string name, int age, string gender)
+        public Person(string name = "John Doe", int age = 30, string gender = "male")
         {
             this.name = name;
             this.age = age;
             this.gender = gender;
-        }
-
-        public Person()
-        {
-            name = "Jane Doe";
-            age = 30;
-            gender = "female";
         }
 
         public void Introduce()

@@ -13,12 +13,16 @@ namespace Ex01_Inheritence
             Person someone = new Person("Tamas Deak", 24, "male");
             Person somebody = new Person();
             Student studentin = new Student("Janos", 22, "male", "Banki");
+            Student baba = new Student();
 
-            Person studentin2 = (Student) studentin.Clone();
+            Student studentin2 = (Student) studentin.Clone();
+
             studentin.SkipDays(10);
             studentin.Introduce();
             studentin2.Introduce();
             somebody.Introduce();
+            baba.Introduce();
+
 
             Console.ReadLine();
         }
