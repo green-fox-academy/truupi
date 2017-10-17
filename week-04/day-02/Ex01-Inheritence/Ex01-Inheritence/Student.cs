@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex01_Inheritence
 {
-    class Student : Person
+    class Student : Person, ICloneable
     {
         protected string previousOrganization;
         protected int skippedDays;
@@ -21,6 +21,11 @@ namespace Ex01_Inheritence
         {
             this.previousOrganization = previousOrganization;
             skippedDays = 0;
+        }
+
+        public object Clone()
+        {
+            return new Student();
         }
 
         public new void GetGoal()

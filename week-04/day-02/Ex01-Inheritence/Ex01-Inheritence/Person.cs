@@ -11,6 +11,7 @@ namespace Ex01_Inheritence
         protected string name;
         protected int age;
         protected string gender;
+        ICloneable cloneable;
 
         public Person(string name, int age, string gender)
         {

@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mentor.cs" />
     <Compile Include="PallidaClass.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
