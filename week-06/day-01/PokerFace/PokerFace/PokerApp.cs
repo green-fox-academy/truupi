@@ -8,11 +8,8 @@ namespace PokerFace
 {
     public class PokerApp
     {
-        public bool isHandValid;
-
         static void Main(string[] args)
         {
-            
         }
 
         public bool CheckHand(string card)
@@ -22,7 +19,10 @@ namespace PokerFace
             {
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         private bool CheckCardDuplicates(string[] hand)
@@ -31,7 +31,7 @@ namespace PokerFace
             {
                 for (int j = 0; j < hand.Length; j++)
                 {
-                    if (hand[i] == hand[j])
+                    if (i != j && hand[i] == hand[j])
                     {
                         return false;
                     }

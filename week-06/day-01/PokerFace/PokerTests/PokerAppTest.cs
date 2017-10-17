@@ -37,8 +37,8 @@ namespace PokerTests
         [Test]
         public void ValidCardTestAgain()
         {
-            string card = "4D";
-            bool output = true;
+            string card = "4DC";
+            bool output = false;
             Assert.AreEqual(output, pokerGame.IsCardValid(card));
         }
 
@@ -59,10 +59,18 @@ namespace PokerTests
         }
 
         [Test]
-        public void FiveCardTest()
+        public void FiveCardTestFalse()
         {
             string cards = "3S XX XX 7D AD";
             bool output = false;
+            Assert.AreEqual(output, pokerGame.CheckHand(cards));
+        }
+
+        [Test]
+        public void FiveCardTestTrue()
+        {
+            string cards = "3S 4D 5D 7D AD";
+            bool output = true;
             Assert.AreEqual(output, pokerGame.CheckHand(cards));
         }
 
