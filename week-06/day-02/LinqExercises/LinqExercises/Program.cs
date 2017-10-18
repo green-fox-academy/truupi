@@ -12,7 +12,10 @@ namespace LinqExercises
 
         static void Main(string[] args)
         {
-            Console.WriteLine(AvgOfOddNumbers(numberArray));
+            foreach (var n in SquareOfEvenNumbers(numberArray))
+            {
+                Console.WriteLine(n);
+            }
             Console.ReadLine();
         }
 
@@ -29,11 +32,23 @@ namespace LinqExercises
         private static IEnumerable<int> EvenNumbers(int[] numberArray)
         {
             IEnumerable<int> evenNumsWithLambda = numberArray.Where(number => number % 2 == 0);
-            IEnumerable<int> evenNumsQuery = from number in numberArray
-                                             where number % 2 == 0
-                                             select number;
+            IEnumerable<int> evenNumsQuery = 
+                from number in numberArray
+                where number % 2 == 0
+                select number;
 
             return evenNumsQuery;
+        }
+
+        private static IEnumerable<int> SquareOfEvenNumbers(int[] numberArray)
+        {
+            IEnumerable<int> squareOfEvenNumsWithLambda = numberArray.Where(number => number > 0).Select(number => number * number);
+            IEnumerable<int> squareOfEvenNumsQuery = 
+                from number in numberArray
+                where number > 0
+                select number * number;
+
+            return squareOfEvenNumsWithLambda;
         }
     }
 }
