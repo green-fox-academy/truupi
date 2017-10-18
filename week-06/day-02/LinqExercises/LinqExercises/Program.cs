@@ -10,12 +10,12 @@ namespace LinqExercises
     {
         private static int[] numberArray = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
         private static int[] numberArray2 = { 3, 9, 2, 8, 6, 5 };
-        private static int[] numberArray3 = { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
+        private static int[] input = { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
 
 
         static void Main(string[] args)
         {
-            foreach (var n in FrequencyOfNumbers(numberArray3))
+            foreach (var n in FreqOfChars("Blame On Me My Friend"))
             {
                 Console.WriteLine(n);
             }
@@ -56,12 +56,38 @@ namespace LinqExercises
 
         private static IEnumerable<int> SquaredIsMore(int[] numberArray2)
         {
+            var squaredIs20 = from number in numberArray2
+                              where number * number > 20
+                              select number;
+
             return numberArray2.Where(number => number * number > 20);
         }
 
         private static Dictionary<int, int> FrequencyOfNumbers(int[] numberArray3)
         {
+            var freqNums = from number in numberArray3
+                           group number by number into uniqueNumbers
+                           select new
+                           {
+                               uniqueNumbers.Key,
+                               Count = (from number in uniqueNumbers select number).Count()
+                           };
+
             return numberArray3.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
         }
+
+        public static Dictionary<char, int> FreqOfChars(string input)
+        {
+            var freqNums = from character in input.ToLower().Replace(" ", "")
+                           group character by character into uniqueChars
+                           select new
+                           {
+                               uniqueChars.Key,
+                               Count = (from number in uniqueChars select number).Count()
+                           };
+
+            return input.ToLower().Replace(" ", "").GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
+        }
+
     }
 }
