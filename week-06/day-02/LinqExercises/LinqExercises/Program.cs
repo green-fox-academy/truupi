@@ -11,11 +11,11 @@ namespace LinqExercises
         private static int[] numberArray = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
         private static int[] numberArray2 = { 3, 9, 2, 8, 6, 5 };
         private static int[] input = { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
-
+        private static string[] cities = { "ROME", "LONDON", "AKI", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
 
         static void Main(string[] args)
         {
-            foreach (var n in FreqOfChars("Blame On Me My Friend"))
+            foreach (var n in CitySelection(cities))
             {
                 Console.WriteLine(n);
             }
@@ -89,5 +89,14 @@ namespace LinqExercises
             return input.ToLower().Replace(" ", "").GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
         }
 
+        public static IEnumerable<string> CitySelection(string[] cityArray)
+        {
+            var selectedCities = from city in cityArray
+                                 where city.First() == 'A' && city.Last() == 'I'
+                                 orderby city ascending
+                                 select city;
+
+            return cityArray.Where(city => city.First() == 'A' && city.Last() == 'I').OrderBy(city => city);
+        }
     }
 }
