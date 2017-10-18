@@ -8,21 +8,30 @@ namespace LinqExercises
 {
     class Program
     {
+        private static int[] numberArray = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
+
         static void Main(string[] args)
         {
-            int[] numberArray = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
+            EvenNumbers(numberArray);
+            AvgOfOddNumbers(numberArray);
+        }
 
+        private static double AvgOfOddNumbers(int[] numberArray)
+        {
+            var avgOfOddNumbers = numberArray.Where(number => number % 2 != 0).AsQueryable().Average();
+
+            return avgOfOddNumbers;
+        }
+
+        private static IEnumerable<int> EvenNumbers(int[] numberArray)
+        {
             IEnumerable<int> evenNumsWithLambda = numberArray.Where(number => number % 2 == 0);
             IEnumerable<int> evenNumsQuery =
                 from number in numberArray
                 where number % 2 == 0
                 select number;
 
-            foreach (var number in evenNumsQuery)
-            {
-                Console.WriteLine(number);
-            }
-            Console.ReadLine();
+            return evenNumsQuery;
         }
     }
 }
