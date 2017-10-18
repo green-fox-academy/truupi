@@ -9,12 +9,13 @@ namespace LinqExercises
     class Program
     {
         private static int[] numberArray = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
-        private static int[] numberArray2 = new[] { 3, 9, 2, 8, 6, 5 };
+        private static int[] numberArray2 = { 3, 9, 2, 8, 6, 5 };
+        private static int[] numberArray3 = { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
 
 
         static void Main(string[] args)
         {
-            foreach (var n in SquaredIsMore(numberArray2))
+            foreach (var n in FrequencyOfNumbers(numberArray3))
             {
                 Console.WriteLine(n);
             }
@@ -53,9 +54,14 @@ namespace LinqExercises
             return squareOfEvenNumsWithLambda;
         }
 
-        private static IEnumerable<double> SquaredIsMore(int[] numberArray2)
+        private static IEnumerable<int> SquaredIsMore(int[] numberArray2)
         {
-            return numberArray2.Select(number => number * number).Where(number => number > 20).Select(number => Math.Sqrt(number));
+            return numberArray2.Where(number => number * number > 20);
+        }
+
+        private static Dictionary<int, int> FrequencyOfNumbers(int[] numberArray3)
+        {
+            return numberArray3.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count());
         }
     }
 }
