@@ -12,24 +12,20 @@ namespace LinqExercises
 
         static void Main(string[] args)
         {
-            EvenNumbers(numberArray);
-            AvgOfOddNumbers(numberArray);
+
         }
 
         private static double AvgOfOddNumbers(int[] numberArray)
         {
-            var avgOfOddNumbers = numberArray.Where(number => number % 2 != 0).AsQueryable().Average();
-
-            return avgOfOddNumbers;
+            return numberArray.Where(number => number % 2 != 0).Average();
         }
 
         private static IEnumerable<int> EvenNumbers(int[] numberArray)
         {
             IEnumerable<int> evenNumsWithLambda = numberArray.Where(number => number % 2 == 0);
-            IEnumerable<int> evenNumsQuery =
-                from number in numberArray
-                where number % 2 == 0
-                select number;
+            IEnumerable<int> evenNumsQuery = from number in numberArray
+                                             where number % 2 == 0
+                                             select number;
 
             return evenNumsQuery;
         }
