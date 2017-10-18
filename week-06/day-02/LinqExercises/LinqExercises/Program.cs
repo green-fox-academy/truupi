@@ -12,12 +12,13 @@ namespace LinqExercises
         private static int[] numberArray2 = { 3, 9, 2, 8, 6, 5 };
         private static int[] input = { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
         private static string[] cities = { "ROME", "LONDON", "AKI", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+        private static char[] exampleArray = { 'm', 'a', 'l', 'a', 'c', 'k', 'a' };
 
         static void Main(string[] args)
         {
-            foreach (var n in CitySelection(cities))
+            foreach (var n in ConverterToString(exampleArray))
             {
-                Console.WriteLine(n);
+                Console.Write(n);
             }
             Console.ReadLine();
         }
@@ -92,11 +93,25 @@ namespace LinqExercises
         public static IEnumerable<string> CitySelection(string[] cityArray)
         {
             var selectedCities = from city in cityArray
-                                 where city.First() == 'A' && city.Last() == 'I'
+                                 where city.StartsWith("A") && city.EndsWith("I")
                                  orderby city ascending
                                  select city;
 
             return cityArray.Where(city => city.First() == 'A' && city.Last() == 'I').OrderBy(city => city);
+        }
+
+        public static IEnumerable<char> UpperCaseSelector(string input)
+        {
+            var selectedChars = from character in input
+                                where char.IsUpper(character)
+                                select character;
+
+            return input.Where(character => char.IsUpper(character));
+        }
+
+        public static string ConverterToString(char[] inputArray)
+        {
+            return String.Join("", inputArray.Select(x => x));
         }
     }
 }
