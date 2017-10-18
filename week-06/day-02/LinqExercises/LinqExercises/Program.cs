@@ -12,11 +12,17 @@ namespace LinqExercises
 
         static void Main(string[] args)
         {
-
+            Console.WriteLine(AvgOfOddNumbers(numberArray));
+            Console.ReadLine();
         }
 
         private static double AvgOfOddNumbers(int[] numberArray)
         {
+            var AvgOddNumbers = from number in numberArray
+                                where number % 2 != 0
+                                select number;
+            AvgOddNumbers.Average();
+
             return numberArray.Where(number => number % 2 != 0).Average();
         }
 
