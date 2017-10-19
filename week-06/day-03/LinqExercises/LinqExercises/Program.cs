@@ -16,10 +16,16 @@ namespace LinqExercises
 
         static void Main(string[] args)
         {
-            foreach (var n in ConverterToString(exampleArray))
+            var Foxies = new List<Fox>
             {
-                Console.Write(n);
-            }
+                new Fox("Tomi","pallida","green"),
+                new Fox(),
+                new Fox("Chilla", "alpaga", "blue"),
+                new Fox("Bu"),
+                new Fox("","","red")
+            };
+
+            Console.WriteLine(Foxies[4].Name);
             Console.ReadLine();
         }
 
