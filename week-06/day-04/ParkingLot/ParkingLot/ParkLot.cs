@@ -26,13 +26,10 @@ namespace ParkingLot
 
         public void SuperCar()
         {
-            var mostCommon = Lot.GroupBy(x => x.Type)
-                                       .OrderByDescending(x => x.Count())
-                                       .Select(x => x).First()
-                                       .GroupBy(x => x.Color)
-                                       .OrderByDescending(x => x.Count())
-                                       .Select(x => x).First();
-            Console.WriteLine($"{mostCommon.First().Color}  {mostCommon.First().Type}");
+            var mostCommon = Lot.GroupBy(x => x.Code).ToList().OrderByDescending(x => x.Count()).First().First();
+
+            
+            Console.WriteLine($"{mostCommon.Color} {mostCommon.Type}");
         }
 
         public void SameColor()

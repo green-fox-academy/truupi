@@ -10,11 +10,29 @@ namespace ParkingLot
     {
         public CarColor Color;
         public CarType Type;
+        public int Code;
 
         public Car(CarColor color, CarType type)
         {
             Type = type;
             Color = color;
+            SetCode();
+        }
+
+        private void SetCode()
+        {
+            int counter = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if ((Color == (CarColor)j && Type == (CarType)i))
+                    {
+                        Code = counter;
+                        return;
+                    }
+                }
+            }
         }
     }
 
