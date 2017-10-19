@@ -12,8 +12,11 @@ namespace ParkingLot
         {
             ParkLot parkLot = new ParkLot();
             parkLot.LotCreation();
-
-            Console.WriteLine(parkLot.Lot[6].Color);
+            parkLot.SameType();
+            Console.WriteLine();
+            parkLot.SameColor();
+            Console.WriteLine();
+            parkLot.SuperCar();
             Console.ReadLine();
         }
     }
