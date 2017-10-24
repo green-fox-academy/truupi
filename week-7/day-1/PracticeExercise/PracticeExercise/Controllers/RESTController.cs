@@ -19,9 +19,10 @@ namespace PracticeExercise.Controllers
         }
 
         [Route("greeting")]
-        public IActionResult Greeting(string name)
+        public IActionResult Greetings(string name)
         {
-            return new JsonResult(new Greeting { Id = 0, Content = $"Hello {name}!" });
+            Greeting.Counter++;
+            return new JsonResult(new Greeting { Id = Greeting.Counter, Content = $"Hello {name}!" });
         }
     }
 }
