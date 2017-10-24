@@ -9,8 +9,8 @@ using PracticeExercise.Models;
 
 namespace PracticeExercise.Controllers
 {
-    [Route("api")]  
-    public class RESTController : Controller
+    [Route("web")]
+    public class WebController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -19,10 +19,15 @@ namespace PracticeExercise.Controllers
         }
 
         [Route("greeting")]
-        public IActionResult Greeting(string name)
+        public IActionResult Greeting()
         {
-            Models.Greeting.Counter++;
-            return new JsonResult(new Greeting { Id = Models.Greeting.Counter, Content = $"Hello {name}!" });
+            var greeting = new Greeting()
+            {
+                Id = 1,
+                Content = "World"
+            };
+
+            return View(greeting);
         }
     }
 }

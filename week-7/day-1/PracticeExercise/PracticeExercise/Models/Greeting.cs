@@ -10,5 +10,6 @@ namespace PracticeExercise.Models
         public long Id;
         public string Content;
         public static int Counter;
+        public string Name;
     }
 }
