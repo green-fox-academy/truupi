@@ -10,14 +10,23 @@ namespace GardenApp
 
         public void WateringPlants(int waterIncome)
         {
-            if (waterIncome != 0)
+            if (waterIncome >= 0)
             {
                 Console.WriteLine($"Watering with {waterIncome}");
+                foreach (var plant in myPlants)
+                {
+                    plant.Watering(waterIncome / myPlants.Count());
+                }
+                WaterLevelReview();
             }
+        }
 
+        public void DryingPlants(int dryerIncome = 1)
+        {
+            Console.WriteLine($"Drying with {dryerIncome}");
             foreach (var plant in myPlants)
             {
-                plant.SetPlantWaterLevel(waterIncome / myPlants.Count());
+                plant.Drying(dryerIncome);
             }
             WaterLevelReview();
         }

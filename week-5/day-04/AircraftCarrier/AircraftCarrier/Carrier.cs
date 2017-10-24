@@ -8,6 +8,6 @@ namespace AircraftCarrier
 {
     class Carrier
     {
-        int currentAmmo
+        int currentAmmo;
     }
 }

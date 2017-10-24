@@ -14,14 +14,21 @@ namespace GardenApp
         protected string type;
         protected float absorb;
 
-        internal float SetPlantWaterLevel(float waterLevel)
+        public float WaterLevel { get => waterLevel; set => waterLevel = value; }
+
+        internal float Watering(float waterLevel)
         {
-            return this.waterLevel += waterLevel * absorb;
+            return this.WaterLevel += waterLevel * absorb;
+        }
+
+        internal float Drying(float dryLevel)
+        {
+            return this.WaterLevel -= dryLevel;
         }
 
         internal float GetPlantWaterLevel()
         {
-            return waterLevel;
+            return WaterLevel;
         }
 
         internal float GetPlantMinWaterLevel()

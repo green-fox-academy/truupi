@@ -8,6 +8,8 @@ namespace GardenApp
 {
     class Program
     {
+        static Garden myGarden = new Garden();
+
         static void Main(string[] args)
         {
             GardenCreation();
@@ -15,17 +17,23 @@ namespace GardenApp
 
         static void GardenCreation()
         {
-            Garden myGarden = new Garden();
             myGarden.GardenPlanting();
-            GardenWatering(myGarden);
+            GardenWatering();
+            GardenDrying();
             Console.ReadLine();
         }
 
-        static void GardenWatering(Garden myGarden)
+        static void GardenWatering()
         {
             myGarden.WateringPlants(0);
             myGarden.WateringPlants(40);
             myGarden.WateringPlants(70);
+        }
+
+        static void GardenDrying()
+        {
+            myGarden.DryingPlants();
+            myGarden.DryingPlants(2);
         }
     }
 }
