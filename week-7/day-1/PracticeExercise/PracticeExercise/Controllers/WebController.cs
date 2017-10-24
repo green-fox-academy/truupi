@@ -26,8 +26,7 @@ namespace PracticeExercise.Controllers
             var greeting = new Greeting()
             {
                 Id = Models.Greeting.Counter,
-                Content = "World",
-                Name = name
+                Content = name,
             };
 
             return View(greeting);
