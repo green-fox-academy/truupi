@@ -19,12 +19,15 @@ namespace PracticeExercise.Controllers
         }
 
         [Route("greeting")]
-        public IActionResult Greeting()
+        public IActionResult Greeting(string name)
         {
+            Models.Greeting.Counter++;
+
             var greeting = new Greeting()
             {
-                Id = 1,
-                Content = "World"
+                Id = Models.Greeting.Counter,
+                Content = "World",
+                Name = name
             };
 
             return View(greeting);
