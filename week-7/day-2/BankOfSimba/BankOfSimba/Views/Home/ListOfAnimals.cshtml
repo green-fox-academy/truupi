@@ -1,0 +1,27 @@
+﻿@model List<BankOfSimba.Models.BankAccount>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bank</title>
+</head>
+<body>
+    <div>
+        <table border="1" cellpadding="15" style="text-align:center">
+            <tr style="font-weight: bold">
+                <td>Name</td>
+                <td>Balance</td>
+                <td>Animal Type</td>
+            </tr>
+                 @{ 
+                     foreach (var bankacc in Model)
+                     {
+                         <tr>
+                             <td>@bankacc.Name</td>
+                             <td>@bankacc.Balance.ToString("n2") Zebra</td>
+                             <td>@bankacc.AnimalType</td>
+                         </tr>
+                     }
+                 }   
+        </table>
+    </div>
+</body>
+</html>
