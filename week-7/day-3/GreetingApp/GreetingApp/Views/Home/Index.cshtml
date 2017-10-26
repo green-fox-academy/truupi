@@ -1,0 +1,64 @@
+﻿@model GreetingApp.Models.UserInfo
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello!</title>
+    <style>
+        body {
+            background-image: url(https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif);
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position:center;
+            text-align: center;
+        }
+
+        p {
+            color:white;
+            font-weight: bold;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:30px;
+            position:page;
+            margin-top:17%;
+            text-align:center;
+            text-transform:uppercase;
+        }
+
+        #field, button {
+            border-color: dodgerblue;
+            border-style: solid;
+            border-width: 4px;
+            background-color: black;
+            color: white;
+            /*font-size: 20px;*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 10px;
+            padding:5px;
+        }
+
+        #field {
+            font-size:24px;
+            color: white;
+        }
+
+        #field:hover, #field:focus {
+            background-color: dodgerblue;
+            border-color: magenta;
+        }
+
+        button:hover {
+            background-color: dodgerblue;
+            border-color: magenta;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <p>Please type in<br /> your name:</p>
+        <input id="field" type="text" name="userName" placeholder="Your name" /><br />
+        <button id="button" type="submit">Greet me!</button>
+    }
+</body>
+</html>
