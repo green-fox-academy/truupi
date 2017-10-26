@@ -2,22 +2,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Bank</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/CSS/StyleSheet.css")" />
 </head>
-<body>
+<body style="background-image:url(https://media.giphy.com/media/ofXHXj7CLI8Ew/giphy.gif); background-color: white; background-repeat:no-repeat; background-size:cover">
+    <h1 style="text-align:right">Bank of Lion King</h1>
     <div>
-        <table border="1" cellpadding="15" style="text-align:center">
-            <tr style="font-weight: bold">
+        <table border="3" cellpadding="10" align="right" style="text-align:center; border-color:black" >
+            <tr style="font-weight: bold; color:lightcoral; background-color:lavenderblush">
+                <td>Ind</td>
                 <td>Name</td>
                 <td>Balance</td>
                 <td>Animal Type</td>
+                <td>Personality</td>
+                <td>Royalty</td>
             </tr>
                  @{ 
                      foreach (var bankacc in Model)
                      {
-                         <tr>
+                         <tr style="@((bankacc.IsKing) ? "color:antiquewhite; background-color:lightcoral; font-weight:bold" : "background:lavender")">
+                             <td style="font-weight:bold">@(Model.IndexOf(bankacc)+1)</td>
                              <td>@bankacc.Name</td>
                              <td>@bankacc.Balance.ToString("n2") Zebra</td>
                              <td>@bankacc.AnimalType</td>
+                             <td>@((bankacc.IsGood) ? "Good One" : "Bad Guy" )</td>
+                             <td>@((bankacc.IsKing) ? "KING" : String.Empty )</td>
                          </tr>
                      }
                  }   
