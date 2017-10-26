@@ -1,0 +1,29 @@
+﻿@model CounterApp.Models.Counter
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Counter application</title>
+</head>
+<body>
+    <style>
+        h1, h2 {
+            text-align:center;
+            
+        }
+        p {
+            color: red;
+        }
+    </style>
+    <h1>Counter application</h1>
+    <h2>
+        THE NUMBER OF SUBMITS: 
+        <p style="font-size:40px">@Model.Counted</p>
+    </h2>
+    <h2>
+        THE BUTTON:
+        @using (Html.BeginForm("index", "home"))
+        {
+            <p><input style="background-color:red;color:white; white-space:normal; font-size:40px; text-wrap:unset; height: 150px; width: 150px; border-color:crimson; border-width: 15px; border-style:groove"  type="submit" name="increaser" value="PUSH ME" /></p>
+        }
+    </h2>
+</body>
+</html>
