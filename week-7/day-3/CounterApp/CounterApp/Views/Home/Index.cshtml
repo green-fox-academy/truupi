@@ -2,28 +2,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Counter application</title>
-</head>
-<body>
     <style>
-        h1, h2 {
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align:center;
-            
+            font-size: 30px;
+            text-transform:uppercase;
         }
+
         p {
-            color: red;
+            color: crimson;
+        }
+
+        #increasebutton {
+            background-color: crimson;
+            border-color: crimson;
+            border-style: initial;
+            border-width: 15px;
+            color: white;
+            font-size: 40px;
+            height: 150px;
+            text-wrap: unset;
+            font-weight:bold;
+            white-space: normal;
+            width: 150px;
         }
     </style>
+</head>
+<body>
     <h1>Counter application</h1>
     <h2>
-        THE NUMBER OF SUBMITS: 
-        <p style="font-size:40px">@Model.Counted</p>
+        The number of submits: 
+        <p>@Model.Counted</p>
     </h2>
     <h2>
-        THE BUTTON:
+        The Button:
+    </h2>
+    <p>
         @using (Html.BeginForm("index", "home"))
         {
-            <p><input style="background-color:red;color:white; white-space:normal; font-size:40px; text-wrap:unset; height: 150px; width: 150px; border-color:crimson; border-width: 15px; border-style:groove"  type="submit" name="increaser" value="PUSH ME" /></p>
+            <input id="increasebutton" type="submit" name="increaser" value="PUSH ME" />
         }
-    </h2>
+    </p>
 </body>
 </html>
