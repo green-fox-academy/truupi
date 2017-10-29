@@ -1,0 +1,27 @@
+﻿@model dynamic
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello!</title>
+    <link href="~/css/IndexSheet.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <p id="message">Please type in<br /> the numbers you want to calculate with:</p>
+        <input id="field" type="text" name="inputNumber1" placeholder="First number" />
+        <select id="arithmetic" name="arithmetictype">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="div">/</option>
+            <option value="mul">*</option>
+        </select>
+
+        <input id="field" type="text" name="inputNumber2" placeholder="Second number" /><br />
+        <button id="button" type="submit">Calculate!</button>
+        @if (Model != null)
+        {
+            <p>Result = @Model</p>
+        }
+    }
+</body>
+</html>

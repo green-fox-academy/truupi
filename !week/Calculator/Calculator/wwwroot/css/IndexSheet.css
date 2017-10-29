@@ -1,0 +1,56 @@
+﻿body {
+    background-image: url(https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    position: page;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#message {
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    position: page;
+    margin-top: 17%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#field, button, #arithmetic {
+    border-color: dodgerblue;
+    border-style: solid;
+    border-width: 4px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+#field {
+    width: 15%;
+    color: white;
+}
+
+    #field:hover, #field:focus, #arithmetic:focus {
+        border-color: magenta;
+    }
+
+button:hover, #arithmetic:hover {
+    border-color: magenta;
+}
