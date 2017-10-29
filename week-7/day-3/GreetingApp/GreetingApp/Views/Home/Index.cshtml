@@ -1,26 +1,25 @@
-﻿@model GreetingApp.Models.UserInfo
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Hello!</title>
+    <title>Generic Calculator</title>
     <style>
         body {
-            background-image: url(https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif);
+            /*background-image: url(https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif);*/
             background-color: black;
             background-repeat: no-repeat;
-            background-size:contain;
-            background-position:center;
+            background-size: contain;
+            background-position: center;
             text-align: center;
         }
 
         p {
-            color:white;
+            color: white;
             font-weight: bold;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size:30px;
-            position:page;
-            margin-top:17%;
-            text-align:center;
-            text-transform:uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            position: page;
+            margin-top: 17%;
+            text-align: center;
+            text-transform: uppercase;
         }
 
         #field, button {
@@ -34,18 +33,18 @@
             text-transform: uppercase;
             text-align: center;
             margin: 10px;
-            padding:5px;
+            padding: 5px;
         }
 
         #field {
-            font-size:24px;
+            font-size: 24px;
             color: white;
         }
 
-        #field:hover, #field:focus {
-            background-color: dodgerblue;
-            border-color: magenta;
-        }
+            #field:hover, #field:focus {
+                background-color: dodgerblue;
+                border-color: magenta;
+            }
 
         button:hover {
             background-color: dodgerblue;
@@ -57,7 +56,7 @@
     @using (Html.BeginForm("Index", "Home"))
     {
         <p>Please type in<br /> your name:</p>
-        <input id="field" type="text" name="userName" placeholder="Your name" /><br />
+        <input id="field" type="" name="userName" placeholder="Your name" /><br />
         <button id="button" type="submit">Greet me!</button>
     }
 </body>
