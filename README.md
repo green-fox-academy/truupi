@@ -2,5 +2,5 @@
 
 !week = Projects made specifically for demos, practicing or self-entertainment.
 
-More about me on my [github.io](truupi.github.io) profile soon.
+More about me on my [github.io](http://truupi.github.io) profile soon.
 
