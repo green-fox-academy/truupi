@@ -1,0 +1,18 @@
+﻿@model ToDoApp.Models.Todo
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add task to your To-Do-List</title>
+</head>
+<body>
+    <h1>Add a task:</h1>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>@Html.LabelFor(task => task.Title): @Html.TextBoxFor(task => task.Title)</div>
+            <div>@Html.LabelFor(task => task.IsUrgent) @Html.CheckBoxFor(task => task.IsUrgent)</div>
+            <div>@Html.LabelFor(task => task.IsDone) @Html.CheckBoxFor(task => task.IsDone)</div>
+            <button type="submit" value="Submit">Add task</button>
+        }
+    </div>
+</body>
+</html>

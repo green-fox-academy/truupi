@@ -2,52 +2,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo CRUD App</title>
-    <style>
-        span, p {
-            font-weight: bold;
-        }
-
-        table {
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        th {
-            border: 2px solid red;
-            padding: 0px 3px 0px 3px;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        td {
-            padding:5px 3px 5px 3px;
-            border: 2px solid black;
-        }
-    </style>
+    <link href="~/Stylesheet/TodoStyleSheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Title</th>
-                <th>Done</th>
-                <th>Urgent</th>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Priority</th>
             </tr>
         </thead>
         <tbody>
-            @{
-                foreach (var task in Model)
+            @{  foreach (var task in Model)
                 {
                     <tr>
-                        <td>@task.Id</td>
+                        <td id="id">@task.Id</td>
                         <td>@task.Title</td>
-                        <td>@task.IsDone</td>
-                        <td>@task.IsUrgent</td>
+                            @if (@task.IsDone)
+                            { 
+                                <td id="done"><img src="~/Assets/check-symbol.png" alt="checked" /></td>
+                            }
+                            else
+                            {
+                                <td id="done"><img src="~/Assets/multiply.png" alt="unchecked" /></td>
+                            }
+                            @if (@task.IsUrgent)
+                            {
+                            <td id="done"><img src="~/Assets/flag.png" alt="urgent" /></td>
+                            }
+                            else
+                            {
+                                <td id="done"><img src="~/Assets/.png" /></td>
+                            }
+                            <td class="edit"><a href="/deletetask/@task.Id"><img src="~/Assets/unchecked.png" alt="delete" /></a></td>
                     </tr>
                 }
             }
         </tbody>
     </table>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <select class="form-control" name="IsDone">
+                <option value="All">All</option>
+                <option value="Done">Done</option>
+                <option value="NotDone">Not done</option>
+            </select>
+            <button type="submit" value="Submit">Sort</button>
+        }
+    </div>
+    <div class="form-control" id="addtaskie"><a href="/addtask" >Add new task</a></div>
 </body>
 </html>

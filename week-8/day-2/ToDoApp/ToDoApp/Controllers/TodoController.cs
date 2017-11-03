@@ -12,18 +12,31 @@ namespace ToDoApp.Controllers
     [Route("todo")]
     public class TodoController : Controller
     {
-        TodoRepository TodoRepository;
+        TodoRepository todoRepository;
+        static string IsDone = "";
 
         public TodoController(TodoRepository todoRepository)
         {
-            TodoRepository = todoRepository;
+            this.todoRepository = todoRepository;
         }
 
+        [HttpGet]
         [Route("")]
         [Route("list")]
         public IActionResult List()
         {
-            return View(TodoRepository.ListTasks());
+            string isDone = IsDone;
+            IsDone = "";
+            return View(todoRepository.CheckTaskStatus(isDone));
+        }
+
+        [HttpPost]
+        [Route("")]
+        [Route("list")]
+        public IActionResult ListIsDone(string isDone)
+        {
+            IsDone = isDone;
+            return RedirectToAction("List");
         }
     }
 }

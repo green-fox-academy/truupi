@@ -5,17 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\Assets\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\Assets\checked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Assets\unchecked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

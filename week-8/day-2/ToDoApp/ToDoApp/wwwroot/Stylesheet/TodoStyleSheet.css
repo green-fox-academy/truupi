@@ -1,0 +1,81 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 15px;
+}
+
+a {
+    color: black;
+    text-decoration-line: none;
+}
+
+.edit {
+    width: 30px;
+    text-align: center;
+    border: 0px solid white;
+    border-collapse:collapse;
+}
+
+#id {
+    text-align: center;
+}
+
+#done {
+    text-align: center;
+}
+
+#addtaskie {
+    width:150px;
+}
+
+.form-control  {
+    padding: 5px 0px 5px 0px;
+    width: 154px;
+    font-size: 15px;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button {
+    width: 80px;
+    font-size: 15px;
+    padding: 5px 3px 5px 3px;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+option {
+    font-weight: bold;
+}
+
+button {
+    border: 2px solid red;
+    background-color: white;
+}
+
+button:hover, #addtask:hover, .form-control:hover {
+    background-color: red;
+    color: white;
+    border-color:black;
+    cursor:pointer;
+}
+
+span, p {
+    font-weight: bold;
+}
+
+th {
+    padding: 0px 3px 0px 3px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 5px 3px 5px 3px;
+    border: 2px solid black;
+}
