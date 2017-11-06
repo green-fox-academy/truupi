@@ -8,62 +8,68 @@ namespace TennisApp
 {
     class TennisGame1 : ITennisGame
     {
-        private int m_score1 = 0;
-        private int m_score2 = 0;
-        private string player1Name;
-        private string player2Name;
+        private int playerScore = 0;
+        private int opponentScore = 0;
+        private string playerName;
+        private string opponentName;
 
-        public TennisGame1(string player1Name, string player2Name)
+        public TennisGame1(string playerName, string opponentName)
         {
-            this.player1Name = player1Name;
-            this.player2Name = player2Name;
+            this.playerName = playerName;
+            this.opponentName = opponentName;
         }
 
         public void WonPoint(string playerName)
         {
             if (playerName == "player1")
-                m_score1 += 1;
+                playerScore += 1;
             else
-                m_score2 += 1;
+                opponentScore += 1;
+        }
+        
+        public string EqualScores()
+        {
+            string score = String.Empty;
+            switch (playerScore)
+            {
+                case 0:
+                    score = "Love-All";
+                    break;
+                case 1:
+                    score = "Fifteen-All";
+                    break;
+                case 2:
+                    score = "Thirty-All";
+                    break;
+                default:
+                    score = "Deuce";
+                    break;
+            }
+            return score;
         }
 
         public string GetScore()
         {
             string score = "";
-            var tempScore = 0;
-            if (m_score1 == m_score2)
+            int tempScore = 0;
+            if (playerScore == opponentScore)
             {
-                switch (m_score1)
-                {
-                    case 0:
-                        score = "Love-All";
-                        break;
-                    case 1:
-                        score = "Fifteen-All";
-                        break;
-                    case 2:
-                        score = "Thirty-All";
-                        break;
-                    default:
-                        score = "Deuce";
-                        break;
-
-                }
+                score = EqualScores();
             }
-            else if (m_score1 >= 4 || m_score2 >= 4)
+            else if (playerScore >= 4 || opponentScore >= 4)
             {
-                var minusResult = m_score1 - m_score2;
-                if (minusResult == 1) score = "Advantage player1";
-                else if (minusResult == -1) score = "Advantage player2";
-                else if (minusResult >= 2) score = "Win for player1";
+                int scoreDifference = playerScore - opponentScore;
+                if (scoreDifference == 1) score = "Advantage player1";
+                else if (scoreDifference == -1) score = "Advantage player2";
+                else if (scoreDifference >= 2) score = "Win for player1";
                 else score = "Win for player2";
             }
             else
             {
-                for (var i = 1; i < 3; i++)
+                for (int i = 1; i < 3; i++)
                 {
-                    if (i == 1) tempScore = m_score1;
-                    else { score += "-"; tempScore = m_score2; }
+                    if (i == 1) tempScore = playerScore;
+                    else { score += "-"; tempScore = opponentScore; }
                     switch (tempScore)
                     {
                         case 0:

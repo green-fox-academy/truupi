@@ -36,6 +36,7 @@ namespace TennisApp
     [TestFixture(4, 6, "Win for player2")]
     [TestFixture(16, 14, "Win for player1")]
     [TestFixture(14, 16, "Win for player2")]
+
     public class TennisTests
     {
         private readonly int player1Score;
@@ -82,7 +83,6 @@ namespace TennisApp
             }
             Assert.AreEqual(this.expectedScore, game.GetScore());
         }
-
     }
 
     [TestFixture]
@@ -120,5 +120,4 @@ namespace TennisApp
             }
         }
     }
-
 }
