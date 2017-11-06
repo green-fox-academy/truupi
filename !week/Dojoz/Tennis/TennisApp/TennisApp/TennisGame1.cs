@@ -10,8 +10,9 @@ namespace TennisApp
     {
         private int playerScore = 0;
         private int opponentScore = 0;
-        private string playerName;
-        private string opponentName;
+        private string playerName = "player1";
+        private string opponentName = "player2";
+        private string score;
 
         public TennisGame1(string playerName, string opponentName)
         {
@@ -19,17 +20,66 @@ namespace TennisApp
             this.opponentName = opponentName;
         }
 
-        public void WonPoint(string playerName)
+        public void WonPoint(string gameWinner)
         {
-            if (playerName == "player1")
-                playerScore += 1;
+            if (gameWinner.Equals(playerName))
+            {
+                playerScore++;
+            }
             else
-                opponentScore += 1;
+            {
+                opponentScore++;
+            }
         }
-        
-        public string EqualScores()
+
+        public string GetScore()
         {
-            string score = String.Empty;
+            score = String.Empty;
+            if (playerScore == opponentScore)
+            {
+                EqualScores();
+            }
+            else if (playerScore >= 4 || opponentScore >= 4)
+            {
+                AfterDouceScores();
+            }
+            else
+            {
+                BeforeDouceScores();
+            }
+            return score;
+        }
+
+        private void BeforeDouceScores()
+        {
+            int tempScore = 0;
+            for (int i = 1; i < 3; i++)
+            {
+                if (i == 1)
+                {
+                    tempScore = playerScore;
+                }
+                else { score += "-"; tempScore = opponentScore; }
+                switch (tempScore)
+                {
+                    case 0:
+                        score += "Love";
+                        break;
+                    case 1:
+                        score += "Fifteen";
+                        break;
+                    case 2:
+                        score += "Thirty";
+                        break;
+                    case 3:
+                        score += "Forty";
+                        break;
+                }
+            }
+        }
+
+        private void EqualScores()
+        {
             switch (playerScore)
             {
                 case 0:
@@ -45,56 +95,28 @@ namespace TennisApp
                     score = "Deuce";
                     break;
             }
-            return score;
         }
 
-        public string AfterDouce()
+        private void AfterDouceScores()
         {
-            string score = String.Empty;
             int scoreDifference = playerScore - opponentScore;
-            if (scoreDifference == 1) score = "Advantage player1";
-            else if (scoreDifference == -1) score = "Advantage player2";
-            else if (scoreDifference >= 2) score = "Win for player1";
-            else score = "Win for player2";
-            return score;
-        }
 
-        public string GetScore()
-        {
-            string score = "";
-            int tempScore = 0;
-            if (playerScore == opponentScore)
+            if (scoreDifference == 1)
             {
-                score = EqualScores();
+                score = $"Advantage {playerName}";
             }
-            else if (playerScore >= 4 || opponentScore >= 4)
+            else if (scoreDifference == -1)
             {
-                score = AfterDouce();
+                score = $"Advantage {opponentName}";
+            }
+            else if (scoreDifference >= 2)
+            {
+                score = $"Win for {playerName}";
             }
             else
             {
-                for (int i = 1; i < 3; i++)
-                {
-                    if (i == 1) tempScore = playerScore;
-                    else { score += "-"; tempScore = opponentScore; }
-                    switch (tempScore)
-                    {
-                        case 0:
-                            score += "Love";
-                            break;
-                        case 1:
-                            score += "Fifteen";
-                            break;
-                        case 2:
-                            score += "Thirty";
-                            break;
-                        case 3:
-                            score += "Forty";
-                            break;
-                    }
-                }
+                score = $"Win for {opponentName}";
             }
-            return score;
         }
     }
 }
