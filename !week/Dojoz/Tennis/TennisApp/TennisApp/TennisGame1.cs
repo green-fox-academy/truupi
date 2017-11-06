@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using TennisApp.Collections;
 
 namespace TennisApp
 {
@@ -33,7 +35,7 @@ namespace TennisApp
             score = String.Empty;
             if (playerScore.Equals(opponentScore))
             {
-                EqualScores();
+                EqualScores(playerScore);
             }
             else if (playerScore >= 4 || opponentScore >= 4)
             {
@@ -48,23 +50,9 @@ namespace TennisApp
 
         private string CurrentScore(int currentScore)
         {
-            string resultScore = String.Empty;
-            switch (currentScore)
-            {
-                case 0:
-                    resultScore = "Love";
-                    break;
-                case 1:
-                    resultScore = "Fifteen";
-                    break;
-                case 2:
-                    resultScore = "Thirty";
-                    break;
-                case 3:
-                    resultScore = "Forty";
-                    break;
-            }
-            return resultScore;
+            return ScoreCollections.ScoreList
+                .Find(score => score.GameState == currentScore)
+                .ValueOfScore;
         }
 
         private void BeforeDouceScores()
@@ -72,23 +60,11 @@ namespace TennisApp
             score = CurrentScore(playerScore) + "-" + CurrentScore(opponentScore);
         }
 
-        private void EqualScores()
+        private void EqualScores(int currentScore)
         {
-            switch (playerScore)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
-            }
+            score = ScoreCollections.ScoreList
+                .Find(s => s.GameState == currentScore)
+                .EqualScore;
         }
 
         private void AfterDouceScores()
