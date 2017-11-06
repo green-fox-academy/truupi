@@ -50,32 +50,30 @@ namespace TennisApp
             return score;
         }
 
+        private string CurrentScore(int currentScore)
+        {
+            string resultScore = String.Empty;
+            switch (currentScore)
+            {
+                case 0:
+                    resultScore = "Love";
+                    break;
+                case 1:
+                    resultScore = "Fifteen";
+                    break;
+                case 2:
+                    resultScore = "Thirty";
+                    break;
+                case 3:
+                    resultScore = "Forty";
+                    break;
+            }
+            return resultScore;
+        }
+
         private void BeforeDouceScores()
         {
-            int tempScore = 0;
-            for (int i = 1; i < 3; i++)
-            {
-                if (i == 1)
-                {
-                    tempScore = playerScore;
-                }
-                else { score += "-"; tempScore = opponentScore; }
-                switch (tempScore)
-                {
-                    case 0:
-                        score += "Love";
-                        break;
-                    case 1:
-                        score += "Fifteen";
-                        break;
-                    case 2:
-                        score += "Thirty";
-                        break;
-                    case 3:
-                        score += "Forty";
-                        break;
-                }
-            }
+            score = CurrentScore(playerScore) + "-" + CurrentScore(opponentScore);
         }
 
         private void EqualScores()
