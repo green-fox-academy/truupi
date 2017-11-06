@@ -50,9 +50,13 @@ namespace TennisApp
 
         private string CurrentScore(int currentScore)
         {
-            return ScoreCollections.ScoreList
-                .Find(score => score.GameState == currentScore)
-                .ValueOfScore;
+            if (ScoreCollections.ScoreList.Exists(score => score.GameState == currentScore))
+            {
+                return ScoreCollections.ScoreList
+                    .Find(score => score.GameState == currentScore)
+                    .ValueOfScore;
+            }
+            return "Can't handle this GameState! Give up!";
         }
 
         private void BeforeDouceScores()
