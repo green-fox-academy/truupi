@@ -1,0 +1,25 @@
+﻿@model List<ContactCardApp.Models.ContactCard>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Existing Cards - Contact Card Creator</title>
+    <link rel="stylesheet" href="~/css/SpecificContactStylesheet.css">
+
+</head>
+<body>
+    <div>
+        @{
+            foreach (var card in Model)
+            {
+                <div class="card">
+                    <img src="@card.ImageLink" alt="Picture">
+                    <h1>@card.FirstName @card.LastName</h1>
+                    <p class="title">@card.Job, <br />@card.CompanyName</p>
+                    <p>@card.EmailAddress</p>
+                    <a id="detailslink" href="/listcontacts/@card.Id">Details</a>
+                    <p><br /></p>
+                </div>
+            }
+        }
+    </div>
+</body>
+</html>

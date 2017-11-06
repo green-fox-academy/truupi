@@ -1,0 +1,16 @@
+﻿@model ContactCardApp.Models.ContactCard
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.FirstName @Model.LastName's Contact Card</title>
+    <link rel="stylesheet" href="~/css/SpecificContactStylesheet.css">
+</head>
+<body>
+    <div class="card">
+        <img src="@Model.ImageLink" alt="Picture">
+        <h1>@Model.FirstName @Model.LastName</h1>
+        <p class="title">@Model.Job, @Model.CompanyName</p>
+        <p>@Model.EmailAddress</p>
+        <p><button>Contact</button></p>
+    </div>
+</body>
+</html>
