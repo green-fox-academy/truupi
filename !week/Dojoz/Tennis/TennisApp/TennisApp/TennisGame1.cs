@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TennisApp
 {
@@ -35,7 +31,7 @@ namespace TennisApp
         public string GetScore()
         {
             score = String.Empty;
-            if (playerScore == opponentScore)
+            if (playerScore.Equals(opponentScore))
             {
                 EqualScores();
             }
