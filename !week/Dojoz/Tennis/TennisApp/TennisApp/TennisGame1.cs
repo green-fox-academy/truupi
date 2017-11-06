@@ -48,6 +48,17 @@ namespace TennisApp
             return score;
         }
 
+        public string AfterDouce()
+        {
+            string score = String.Empty;
+            int scoreDifference = playerScore - opponentScore;
+            if (scoreDifference == 1) score = "Advantage player1";
+            else if (scoreDifference == -1) score = "Advantage player2";
+            else if (scoreDifference >= 2) score = "Win for player1";
+            else score = "Win for player2";
+            return score;
+        }
+
         public string GetScore()
         {
             string score = "";
@@ -58,11 +69,7 @@ namespace TennisApp
             }
             else if (playerScore >= 4 || opponentScore >= 4)
             {
-                int scoreDifference = playerScore - opponentScore;
-                if (scoreDifference == 1) score = "Advantage player1";
-                else if (scoreDifference == -1) score = "Advantage player2";
-                else if (scoreDifference >= 2) score = "Win for player1";
-                else score = "Win for player2";
+                score = AfterDouce();
             }
             else
             {
