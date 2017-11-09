@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RestBackend.Repositories;
 
-namespace RestBackend
+namespace RestBackendTest
 {
     public class Startup
     {
@@ -17,8 +16,6 @@ namespace RestBackend
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            services.AddScoped<HomeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,10 +27,6 @@ namespace RestBackend
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseMvcWithDefaultRoute();
-            app.UseStaticFiles();
-            app.UseDefaultFiles();
 
             app.Run(async (context) =>
             {

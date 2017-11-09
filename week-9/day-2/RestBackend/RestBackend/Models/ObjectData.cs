@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace RestBackend.Models
 {
-    public class DataObject
+    public class ObjectData
     {
+        public int? Until { get; set; }
     }
 }
