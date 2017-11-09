@@ -8,7 +8,7 @@
     <div>
         @using (Html.BeginForm())
         {
-            <div>@Html.LabelFor(task => task.Title): @Html.TextBoxFor(task => task.Title)</div>
+            <div class="form-group">@Html.LabelFor(task => task.Title): @Html.TextBoxFor(task => task.Title)</div>
             <div>@Html.LabelFor(task => task.IsUrgent) @Html.CheckBoxFor(task => task.IsUrgent)</div>
             <div>@Html.LabelFor(task => task.IsDone) @Html.CheckBoxFor(task => task.IsDone)</div>
             <button type="submit" value="Submit">Add task</button>

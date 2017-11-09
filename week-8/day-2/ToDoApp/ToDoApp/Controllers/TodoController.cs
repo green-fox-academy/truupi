@@ -9,7 +9,7 @@ using ToDoApp.Repositories;
 
 namespace ToDoApp.Controllers
 {
-    [Route("todo")]
+    [Route("")]
     public class TodoController : Controller
     {
         TodoRepository todoRepository;

@@ -2,10 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo CRUD App</title>
-    <link href="~/Stylesheet/TodoStyleSheet.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/Stylesheet/TodoStyleSheet.css" rel="stylesheet" type="text/css" />*@
+    @{ 
+        Layout = "_Layout";
+    }
 </head>
 <body>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -45,14 +48,16 @@
     <div>
         @using (Html.BeginForm())
         {
-            <select class="form-control" name="IsDone">
-                <option value="All">All</option>
-                <option value="Done">Done</option>
-                <option value="NotDone">Not done</option>
-            </select>
-            <button type="submit" value="Submit">Sort</button>
+            <p>
+                <select class="dropdown theme-dropdown dropdown-header" name="IsDone">
+                    <option value="All">All</option>
+                    <option value="Done">Done</option>
+                    <option value="NotDone">Not done</option>
+                </select>
+            </p>
+            <p><button class="btn btn-outline-success btn-md" type="submit" value="Submit">Sort</button></p>
         }
-    </div>
-    <div class="form-control" id="addtaskie"><a href="/addtask" >Add new task</a></div>
+    </div><br />
+    <div><a class="btn btn-block btn-dark" href="/addtask" >Add new task</a></div>
 </body>
 </html>
