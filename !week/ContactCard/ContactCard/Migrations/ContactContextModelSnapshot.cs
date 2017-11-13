@@ -21,6 +21,8 @@ namespace ContactCardApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Age");
+
                     b.Property<int>("CardStyle");
 
                     b.Property<string>("CompanyName");
@@ -33,6 +35,8 @@ namespace ContactCardApp.Migrations
 
                     b.Property<string>("ImageLink");
 
+                    b.Property<string>("InstagramLink");
+
                     b.Property<string>("Job");
 
                     b.Property<string>("LastName");
@@ -43,7 +47,7 @@ namespace ContactCardApp.Migrations
 
                     b.Property<string>("TwitterLink");
 
-                    b.Property<string>("WebAdress");
+                    b.Property<string>("WebAddress");
 
                     b.HasKey("Id");
 

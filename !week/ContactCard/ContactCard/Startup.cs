@@ -12,6 +12,7 @@ using System.IO;
 using ContactCardApp.Entities;
 using Microsoft.EntityFrameworkCore;
 using ContactCardApp.Repositories;
+using ContactCardApp.Services;
 
 namespace ContactCardApp
 {
@@ -30,6 +31,7 @@ namespace ContactCardApp
             services.AddMvc();
             services.AddDbContext<ContactContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:ContactConnection"]));
             services.AddScoped<ContactRepository>();
+            services.AddScoped<ContactService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

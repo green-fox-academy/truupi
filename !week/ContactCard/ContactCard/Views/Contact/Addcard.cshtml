@@ -1,0 +1,118 @@
+﻿@model ContactCardApp.ViewModels.ContactCardViewModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Contact Card Creator</title>
+    @{ Layout = "_Layout";}
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/listcontacts">List Cards</a></li>
+                    <li><a href="/addcard">Add Cards</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <form class="form-horizontal" action="/addcard" method="post">
+                @Html.ValidationSummary()
+                <div class="form-group">
+                    <label for="FirstName" class="col-sm-2 control-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input name="FirstName" value="@Model.FirstName" type="text" class="form-control" id="inputEmail3" placeholder="ex. Janos">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="LastName" class="col-sm-2 control-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input name="LastName" value="@Model.LastName" type="text" class="form-control" id="inputEmail3" placeholder="ex. Kovacs">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="Email" name="EmailAddress" value="@Model.EmailAddress" class="form-control" id="inputEmail3" placeholder="ex. janoskovacs@gmail.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Age" class="col-sm-2 control-label">Age</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="Age" value="@Model.Age" class="form-control" id="inputEmail3" placeholder="ex. 23">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Job" class="col-sm-2 control-label">Job</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="Job" value="@Model.Job" class="form-control" id="inputEmail3" placeholder="ex. Software Developer">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="CompanyName" class="col-sm-2 control-label">Company Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="CompanyName" value="@Model.CompanyName" class="form-control" id="inputEmail3" placeholder="ex. Green Fox Academy">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="PhoneNumber" class="col-sm-2 control-label">Phone Number</label>
+                    <div class="col-sm-10">
+                        <input type="tel" name="PhoneNumber" class="form-control" id="inputEmail3" placeholder="ex. 06301234567">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ImageLink" class="col-sm-2 control-label">Image Link</label>
+                    <div class="col-sm-10">
+                        <input name="ImageLink" value="@Model.ImageLink" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://www.imghost.com/profilepic.jpg">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="WebAddress" class="col-sm-2 control-label">Web Address</label>
+                    <div class="col-sm-10">
+                        <input name="WebAddress" value="@Model.WebAddress" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://truupi.github.io">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="FacebookLink" class="col-sm-2 control-label">Facebook Link</label>
+                    <div class="col-sm-10">
+                        <input name="FacebookLink" value="@Model.FacebookLink" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://facebook.com/truupi">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="LinkedInLink" class="col-sm-2 control-label">LinkedIn Link</label>
+                    <div class="col-sm-10">
+                        <input name="LinkedInLink" value="@Model.LinkedInLink" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://www.linkedin.com/in/tam%C3%A1s-de%C3%A1k-a1344a145">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InstagramLink" class="col-sm-2 control-label">Instagram Link</label>
+                    <div class="col-sm-10">
+                        <input name="InstagramLink" value="@Model.InstagramLink" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://instagram.com/truupi">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TwitterLink" class="col-sm-2 control-label">Twitter Link</label>
+                    <div class="col-sm-10">
+                        <input name="TwitterLink" value="@Model.TwitterLink" type="text" class="form-control" id="inputEmail3" placeholder="ex. https://twitter.com/truupi">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" value="Submit" class="btn btn-default">Create Card</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ContactCardApp.Repositories;
+using ContactCardApp.Models;
+using ContactCardApp.ViewModels;
+using ContactCardApp.Services;
 
 namespace ContactCardApp.Controllers
 {
     [Route("")]
     public class ContactController : Controller
     {
-        ContactRepository contactRepository;
+        ContactService ContactService;
 
-        public ContactController(ContactRepository contactRepository)
+        public ContactController(ContactService contactService)
         {
-            this.contactRepository = contactRepository;
+            ContactService = contactService;
         }
 
         [HttpGet]
@@ -21,17 +24,32 @@ namespace ContactCardApp.Controllers
         }
 
         [HttpGet]
+        [Route("/addcard")]
+        public IActionResult Addcard()
+        {
+            return View(new ContactCardViewModel());
+        }
+
+        [HttpPost]
+        [Route("/addcard")]
+        public IActionResult AddcardPost(ContactCardViewModel inputContactCardViewModel)
+        {
+            ContactService.CreateContactCard(inputContactCardViewModel);
+            return RedirectToAction("ListContacts");
+        }
+
+        [HttpGet]
         [Route("/listcontacts")]
         public IActionResult ListContacts()
         {
-            return View(contactRepository.ListCards());
+            return View(ContactService.ListCards());
         }
 
         [HttpGet]
         [Route("/listcontacts/{id}")]
         public IActionResult ListSpecificContact(int id)
         {
-            return View(contactRepository.ShowSpecificCard(id));
+            return View(ContactService.ShowSpecificCard(id));
         }
     }
 }

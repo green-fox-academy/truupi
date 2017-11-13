@@ -1,51 +1,57 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Contact Card Creator</title>
-    <style>
-        body {
-            text-align:center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        img {
-            max-height:500px;
-        }
-
-        a {
-            text-transform: uppercase;
-            font-weight: bold;
-            text-decoration:none;
-            color:black;
-            font-size: 15px;
-            padding: 5px;
-        }
-
-        h1 {
-            text-transform: uppercase;
-            font-weight: bold;
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            color:deeppink;
-        }
-
-        div {
-            border: 2px solid black;
-            width: 253px;
-            height: 20px;
-            margin: 0 auto;
-            padding: 10px;
-            margin-bottom:5px;
-        }
-    </style>
+    @{ Layout = "_Layout";}
 </head>
 <body>
-    <h1>Contact Card Creator Application</h1>
-    <h2>Create your own card!</h2>
-    <div><a href="/listcontacts">List existing contact cards</a></div>
-    <div><a href="/addcontact">Create new contact card</a></div>
-    <img src="~/Assets/intro.png" alt="homeless" />
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/listcontacts">List Cards</a></li>
+                    <li><a href="/addcard">Add Cards</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 table-bordered" id="startpagedesc">
+                <div class="text-center">
+                    <h1>Contact Card Creator</h1>
+                    <h2>Create your own card!</h2>
+                </div>
+                <div class="text-justify">
+                    <dl class="panel panel-heading">
+                        <dt>What is this?</dt>
+                        <dd>The very foundation of this webpage was to let you be able to create a nice and complete contact card of your profile to share it with everyone or yet better download and print it.</dd>
+                    </dl>
+                    <dl class="panel panel-heading">
+                        <dt>How can I create a card for myself?</dt>
+                        <dd>All you have to do is clicking the <highlight>Add cards</highlight> button at the top of the page and then fill out the form with your personal information. Some data is essential in order to create your card but most of them is optional.</dd>
+                    </dl>
+                    <dl class="panel panel-heading">
+                        <dt>Where can I watch my card or any other cards?</dt>
+                        <dd>The <highlight>List cards</highlight> button at the top of the page shows you all the existing cards in the database.</dd>
+                    </dl>
+                    <dl class="text-center">
+                        <a href="/addcard"><dd class="btn btn-primary">Create your own card</dd></a>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-1 text-center">
+                <img class="introimg text-center" src="~/Assets/Capture.png" />
+            </div>
+        </div>
+    </div>
 </body>
 </html>

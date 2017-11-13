@@ -2,24 +2,63 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Existing Cards - Contact Card Creator</title>
-    <link rel="stylesheet" href="~/css/SpecificContactStylesheet.css">
-
+    @{ Layout = "_Layout";}
 </head>
 <body>
-    <div>
-        @{
-            foreach (var card in Model)
-            {
-                <div class="card">
-                    <img src="@card.ImageLink" alt="Picture">
-                    <h1>@card.FirstName @card.LastName</h1>
-                    <p class="title">@card.Job, <br />@card.CompanyName</p>
-                    <p>@card.EmailAddress</p>
-                    <a id="detailslink" href="/listcontacts/@card.Id">Details</a>
-                    <p><br /></p>
-                </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/listcontacts">List Cards</a></li>
+                    <li><a href="/addcard">Add Cards</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            @{
+                foreach (var card in Model)
+                {
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <div class="img-wrapper">
+                                @{
+                                    if (@card.ImageLink != null)
+                                    {
+                                        <a href="/listcontacts/@card.Id"><img src="@card.ImageLink" alt="Picture"></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/listcontacts/@card.Id"><img style="padding-top:10%" src="~/Assets/ProfilePlaceholderSuit.png" alt="Picutre" /></a>
+                                    }
+                                }
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-capitalize" style="margin-bottom:0px">@card.FirstName</h2><h1 style="margin-top:0px">@card.LastName</h1>
+                                <p class="title text-capitalize">@card.Job<br />@card.CompanyName</p>
+                                <p>@card.EmailAddress</p>
+                                <div class="sociallink">
+                                    <a style="display:inline-block" href="@card.LinkedInLink"><img class="socialicon" src="~/Assets/linkedin-button.svg" /></a>
+                                    <a style="display:inline-block" href="@card.FacebookLink"><img class="socialicon" src="~/Assets/facebook-logo-button.svg" /></a>
+                                    <a style="display:inline-block" href="@card.InstagramLink"><img class="socialicon" src="~/Assets/instagram-social-network-logo-of-photo-camera.svg" /></a>
+                                    <a style="display:inline-block" href="@card.TwitterLink"><img class="socialicon" src="~/Assets/twitter.svg" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             }
-        }
+        </div>
     </div>
 </body>
 </html>
