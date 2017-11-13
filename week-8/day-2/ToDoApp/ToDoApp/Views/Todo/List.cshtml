@@ -2,62 +2,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo CRUD App</title>
-    @*<link href="~/Stylesheet/TodoStyleSheet.css" rel="stylesheet" type="text/css" />*@
-    @{ 
+    @{
         Layout = "_Layout";
     }
 </head>
 <body>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Task</th>
-                <th>Status</th>
-                <th>Priority</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{  foreach (var task in Model)
-                {
-                    <tr>
-                        <td id="id">@task.Id</td>
-                        <td>@task.Title</td>
-                            @if (@task.IsDone)
-                            { 
-                                <td id="done"><img src="~/Assets/check-symbol.png" alt="checked" /></td>
-                            }
-                            else
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{  foreach (var task in Model)
                             {
-                                <td id="done"><img src="~/Assets/multiply.png" alt="unchecked" /></td>
+                                <tr>
+                                    <td id="id">@task.Id</td>
+                                    <td>@task.Title</td>
+                                    @if (@task.IsDone)
+                                    {
+                                        <td id="done"><img src="~/Assets/check-symbol.png" alt="checked" /></td>
+                                    }
+                                    else
+                                    {
+                                        <td id="done"><img src="~/Assets/multiply.png" alt="unchecked" /></td>
+                                    }
+                                    @if (@task.IsUrgent)
+                                    {
+                                        <td id="done"><img src="~/Assets/flag.png" alt="urgent" /></td>
+                                    }
+                                    else
+                                    {
+                                        <td id="done"><img src="~/Assets/.png" /></td>
+                                    }
+                                    <td class="edit"><a href="/deletetask/@task.Id"><img src="~/Assets/unchecked.png" alt="delete" /></a></td>
+                                </tr>
                             }
-                            @if (@task.IsUrgent)
-                            {
-                            <td id="done"><img src="~/Assets/flag.png" alt="urgent" /></td>
-                            }
-                            else
-                            {
-                                <td id="done"><img src="~/Assets/.png" /></td>
-                            }
-                            <td class="edit"><a href="/deletetask/@task.Id"><img src="~/Assets/unchecked.png" alt="delete" /></a></td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
-    <div>
-        @using (Html.BeginForm())
-        {
-            <p>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-block btn-dark" href="/addtask">Add new task</a>
+            </div>
+            @using (Html.BeginForm())
+            {
                 <select class="dropdown theme-dropdown dropdown-header" name="IsDone">
                     <option value="All">All</option>
                     <option value="Done">Done</option>
                     <option value="NotDone">Not done</option>
                 </select>
-            </p>
-            <p><button class="btn btn-outline-success btn-md" type="submit" value="Submit">Sort</button></p>
-        }
-    </div><br />
-    <div><a class="btn btn-block btn-dark" href="/addtask" >Add new task</a></div>
+                <button class="btn btn-outline-success btn-md" type="submit" value="Submit">Sort</button>
+            }
+        </div>
+    </div>
 </body>
 </html>

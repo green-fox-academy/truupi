@@ -25,7 +25,6 @@ namespace ToDoApp.Repositories
                 IsUrgent = todo.IsUrgent,
                 IsDone = todo.IsDone
             });
-
             todoContext.SaveChanges();
         }
 
