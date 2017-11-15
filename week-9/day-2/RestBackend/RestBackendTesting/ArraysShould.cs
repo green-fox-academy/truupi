@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json;
 using RestBackend;
 using RestBackend.Models;
-using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -40,11 +38,11 @@ namespace RestBackendTesting
                 Numbers = new int?[] { 1, 2, 4 }
             };
 
-            var ops = JsonConvert.SerializeObject(operation);
+            string ops = JsonConvert.SerializeObject(operation);
 
-            var stringContent = new StringContent(ops.ToString(), Encoding.UTF8, "application/json");
+            StringContent stringContent = new StringContent(ops, Encoding.UTF8, "application/json");
 
-            var response = await Client.PostAsync("/arrays", stringContent);
+            HttpResponseMessage response = await Client.PostAsync("/arrays", stringContent);
 
             string responseJson = await response.Content.ReadAsStringAsync();
 
