@@ -10,6 +10,7 @@ namespace MiniEx
             Console.WriteLine(GetCommonLetters("Green Fox Academy", "Gf A "));
             Console.WriteLine(GetCommonLetters(null, "Gf A "));
             Console.WriteLine(GetCommonLetters("", "Gf a "));
+            Console.WriteLine(GetCommonLettersWithoutLinq("mamai", "aimam"));
             Console.ReadLine();
         }
 
@@ -25,6 +26,24 @@ namespace MiniEx
             {
                 return String.Empty.ToArray();
             }
+        }
+
+        private static char[] GetCommonLettersWithoutLinq(string word1, string word2)
+        {
+            string common = String.Empty;
+            char[] commonLetters = new char[word1.Length];
+
+            for (int i = 0; i < word1.Length; i++)
+            {
+                for (int j = 0; j < word2.Length; j++)
+                {
+                    if (word1[i] == word2[j])
+                    {
+                        commonLetters[i] = word2[j];
+                    }
+                }
+            }
+            return commonLetters;
         }
     }
 }
