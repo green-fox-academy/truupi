@@ -23,7 +23,7 @@ namespace MiniEx
             }
             else
             {
-                return String.Empty.ToCharArray();
+                return String.Empty.ToArray();
             }
         }
     }
